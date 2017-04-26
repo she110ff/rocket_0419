@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Rocket</title>
+
+<!-- css -->
+<link rel="stylesheet" href="assets/css/import.css">
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<header id="hd" class="hd-fixed">
+		<h1 class="ellipsis hidden-lg hidden-md animated lightSpeedIn ani-duration15">ROCKET</h1>
+		<!-- 좌측 -->
+		<div id="hdLt" class="hd-icon-wrp-lt animated fadeInLeft">
+			<!-- 검색/맞춤 버튼 : 메인과 알림로켓에서만 검색 아이콘 xi-bell xi-magnifier -->
+			<a class="hd-icon" href="" aria-expanded="false" aria-controls="searchTitle" title="검색 더보기" onClick="menuOpen('side-nav-left');return false;"><i class="xi-magnifier"></i><span class="sr-only">검색 더보기</span></a>
+		</div>
+		<!-- 아이로켓 : 오늘 본 페이지-->
+		<div id="I-Rocket" class="login-gate animated rollIn">
+			<div>
+				<a href="" data-toggle="modal" data-target="#todayViewed"><span class="sr-only">오늘 본 페이지</span></a>
+			</div>
+		</div>
+		<!-- 우측 -->
+		<div id="hdRt" class="hd-icon-wrp-rt animated fadeInRight">
+			<a class="hd-icon" href="guide.html" title="사용매뉴얼"><i class="xi-paper"></i><span class="sr-only">사용매뉴얼</span></a>
+			<a class="hd-icon" href="" title="로그인/회원가입" onClick="menuOpen('side-nav-right');return false;"><i class="xi-user"></i><span class="sr-only">로그인/회원가입</span></a>
+		</div>
+		<!-- gnb 
+			[D]  로그인 class=after_login 로 구분
+		-->
+		<nav id="gnb" class="gnb">
+			<ul>
+				<li><h2><a class="font-sp color_rocket" href="index.html"><i class="xi-rocket"></i><span>Rocket</span></a></h2></li>
+				<li class="active"><a href="rocket.html"><i class="xi-satellite"></i><span>로켓기지</span></a></li>
+				<li><a href="recommend.html"><i class="xi-present"></i><span>알림로켓<b class="animated rubberBand">12</b></span></a></li>
+				<li><a href="scrap.html"><i class="xi-tagged-book"></i><span>찜한로켓<b class="animated rubberBand">?</b></span></a></li>
+				<li><a href="mypage_member.html"><i class="xi-flag-triangle"></i><span>탑승로켓<b class="animated rubberBand">8</b></span></a></li>
+			</ul>
+		</nav>
+	</header>
+	<!--// header -->
+
+	<!-- container : mypage -->
+	<div id="container" class="container-mypage">
+
+<!-- mypage include -->
+
+<div id="mypage" class="page-mypage page-sub">
+	<!-- 상단고정 -->
+	<section class="sub-top">
+		<div class="w1200">
+			<h1 class="font-ns ellipsis animated fadeIn">맞춤 로켓 설정</h1>
+			<div class="visible-xs-block visible-sm-block">
+				<!-- 좌측 : 뒤로가기 등 -->
+				<div class="hd-icon-wrp-lt">
+					<a class="nav-close animated fadeInLeft" href=""><span class="sr-only">뒤로가기</span><i class="xi2-angle-left-thin"></i></a>
+				</div>
+				<!-- 메뉴열기 -->
+				<a class="tg-nav-sidebar" href="#sidebar"><span class="sr-only">사이드 메뉴</span><i class="xi-down-square"></i></a>
+			</div>
+		</div>
+	</section>
+	<div class="w1200 clearfix">
+		<!-- 좌측 -->
+		<nav id="sidebar" class="page-sidebar">
+			<div class="sidebar-hd">
+				<a class="profile-wrp" href="profile.html">
+					<img class="img-circle img-responsive" src="https://pbs.twimg.com/profile_images/1521634630/image.jpg" alt="profile">
+				</a>
+				<button type="button" class="no-style color-navy" title="사진 업로드"><i class="xi2-camera"></i><span class="sr-only">사진 업로드</span></button>
+				<h4><strong>홍길동</strong> <small>님</small></h4>
+				<p class="memo">안녕하세요:) 대외활동 중에 아버지와 형을 찾은 홍길동입니다. <br>더 많은 기회가 있으면 좋겠어요!</p>
+				<!-- 해당 sns 정보가 있는 경우에만 .off 제거 -->
+				<ul class="profile-sns clearfix">
+					<li><a class="bg-naver" href="#" target="_blank"><i class="xi-naver"></i> <strong class="sr-only">네이버</strong></a></li>
+					<li><a class="bg-fb" href="#" target="_blank"><i class="xi-facebook"></i> <strong class="sr-only">페이스북</strong></a></li>
+					<li><a class="bg-kakao" href="#" target="_blank"><i class="xi2-kakao"></i> <strong class="sr-only">카카오스토리</strong></a></li>
+					<li><a class="bg-google off" href="#" target="_blank"><i class="xi2-google"></i> <strong class="sr-only">구글</strong></a></li>
+				</ul>
+			</div>
+			<ul class="nav-sidebar">
+				<li>
+					<a href="mypage_modify.html"><i class="xi-wrench"></i>개인정보 설정</a>
+					<ul class="nav nav2">
+						<li><a href="mypage_modify.html" data-target>기본정보<span class="hidden-xs"> 설정</span></a></li>
+						<li><a href="mypage_modify.html" data-target="#sns">소셜계정<span class="hidden-xs"> 설정</span></a></li>
+						<li><a href="mypage_modify.html" data-target="#secret">정보공개<span class="hidden-xs"> 설정</span></a></li>
+						<li><a href="mypage_modify.html" data-target="#resume">이력서정보<span class="hidden-xs"> 설정</span></a></li>
+					</ul>
+				</li>
+				<li class="active">
+					<a href="mypage_recommend.html"><i class="xi-present"></i>맞춤 로켓 설정</a>
+					<ul class="nav nav2">
+						<li class="active"><a href="" data-target="#settingQuick">퀵 분류<span class="hidden-xs">설정</span></a></li>
+						<li><a href="" data-target="#settingKeyword">키워드 <span class="hidden-xs">직접</span> 입력</a></li>
+						<li><a href="" data-target="#settingFilter">고급필터<span class="hidden-xs">설정</span></a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="mypage_alarm.html"><i class="xi-bell"></i>알림 설정</a>
+					<ul class="nav nav2">
+						<li><a href="mypage_alarm.html" data-target="#settingAlram">로켓 알림<span class="hidden-xs"> 설정</span></a></li>
+						<li><a href="mypage_alarm.html" data-target="#settingCommunity">커뮤니티 알림<span class="hidden-xs"> 설정</span></a></li>
+					</ul>
+				</li>
+				<!-- 특정시일 내에 글이 있는 경우 badge에 class="animated rubberBand bg-red"-->
+				<li>
+					<a href="mypage_scrap.html"><i class="xi-paper"></i>커뮤니티 활동</a>
+					<ul class="nav nav2">
+						<li><a href="mypage_scrap.html">찜한글 보기 <span class="badge">8</span></a></li>
+						<li><a href="mypage_review.html">리뷰 보기 <span class="badge">4</span></a></li>
+						<li><a href="mypage_document.html">작성글 보기 <span class="badge">12</span></a></li>
+						<li><a href="mypage_comment.html">댓글 보기 <span class="badge animated rubberBand bg-red">51</span></a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="mypage_notice.html"><i class="xi-antenna"></i>고객지원</a>
+					<ul class="nav nav2">
+						<li><a href="mypage_notice.html">공지사항 <span class="badge">4</span></a></li>
+						<li><a href="mypage_support.html">1:1 문의<span class="hidden-xs">하기</span> <span class="badge bg-red">N</span></a></li>
+						<li><a href="mypage_app.html">앱 정보</a></li>
+						<li><a href="mypage_leave.html">로켓탈출</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<!--// 좌측 -->
+		<!-- 우측 -->
+		<div class="page-content">
+			<!-- 맞춤 로켓 설정 -->
+			<section id="settingQuick" class="card3 form-horizontal">
+				<header class="card-hd">
+					<h2 class="h2">퀵 분류 설정<small>퀵 분류로 빠른 설정이 가능합니다</small></h2>
+				</header>
+				<div class="quick-keyword card3-section-full">
+					<ul class="buttons buttons-checkbox clearfix" data-toggle="buttons">
+						<li><label class="btn btn-default"><input type="checkbox" name="settingQuick"><i class="xi-chart-pyramid"></i><span>대기업</span></label></li>
+						<li><label class="btn btn-default"><input type="checkbox" name="settingQuick"><i class="xi-bank"></i><span>국가/기관</span></label></li>
+						<li><label class="btn btn-default"><input type="checkbox" name="settingQuick"><i class="xi-movie"></i><span>문화/예술</span></label></li>
+						<li><label class="btn btn-default active"><input type="checkbox" name="settingQuick" checked><i class="xi-tent"></i><span>체험/경험</span></label></li>
+						<li><label class="btn btn-default"><input type="checkbox" name="settingQuick"><i class="xi-shoes"></i><span>뷰티</span></label></li>
+						<li><label class="btn btn-default"><input type="checkbox" name="settingQuick"><i class="xi-color"></i><span>디자인</span></label></li>
+						<li><label class="btn btn-default active"><input type="checkbox" name="settingQuick" checked><i class="xi-network"></i><span>인맥</span></label></li>
+						<li><label class="btn btn-default"><input type="checkbox" name="settingQuick"><i class="xi-share-alt"></i><span>블로그/SNS</span></label></li>
+						<li><label class="btn btn-default"><input type="checkbox" name="settingQuick"><i class="xi-cine-camera"></i><span>기자단</span></label></li>
+						<li><label class="btn btn-default"><input type="checkbox" name="settingQuick"><i class="xi-family"></i><span>팀활동</span></label></li>
+						<li><label class="btn btn-default"><input type="checkbox" name="settingQuick"><i class="xi-flight"></i><span>해외/관광</span></label></li>
+						<li><label class="btn btn-default"><input type="checkbox" name="settingQuick"><i class="xi-money"></i><span>상금/상품</span></label></li>
+					</ul>
+				</div>
+			</section>
+			<!-- 키워드 직접 입력 -->
+			<section id="settingKeyword" class="card3 form-horizontal">
+				<header class="card-hd">
+					<h2 class="h2">키워드 입력<small>직접 키워드를 입력할 수 있습니다</small></h2>
+				</header>
+				<div class="input-group">
+					<input type="text" placeholder="키워드를 입력하세요. 예) 여행, 삼성" class="form-control">
+					<span class="input-group-btn">
+						<button type="button" class="btn bg-navy"><span class="sr-only">추가</span><i class="xi-plus"></i></button>
+					</span>
+				</div>
+				<!-- 키워드 추가 -->
+				<ul class="list-inline lst-keyword-add">
+					<li><button type="button" class="btn btn-sm btn-default">삼성 <i class="xi2-close-thin"></i></button></li>
+					<li><button type="button" class="btn btn-sm btn-default">무료 <i class="xi2-close-thin"></i></button></li>
+					<li><button type="button" class="btn btn-sm btn-default">호주여행 <i class="xi2-close-thin"></i></button></li>
+				</ul>
+			</section>
+			<!-- 고급필터 설정 -->
+			<section id="settingFilter" class="card3 form-horizontal">
+				<header class="card-hd">
+					<h2 class="h2">고급필터 설정<small>다양한 필터를 사용할 수 있습니다</small></h2>
+				</header>
+				<section>
+					<ul class="card3-section-full lst-mypage">
+						<!-- 모집정보 공통 -->
+						<li>
+							<a href="">공통필터 <i class="xi-angle-right"></i></a>
+							<!-- [D] 로켓기지에서 필터와 동일, but 공통부분은 빠짐 -->
+							<ul id="srch-filter-0" class="swiper-wrapper srch-filter">
+								<!-- 모집정보(공통) -->
+								<li class="swiper-slide">
+									<h3><i class="xi-paper"></i>모집정보</h3>
+									<ul class="srch-filter-2">
+										<!-- 모집기한 -->
+										<li>
+											<h4>모집기한 <button type="button" class="btn btn-default btn-direct btn-xs pull-right" onClick="$(this).parent().next().toggle();"><i class="xi-plus"></i> 직접입력</button></h4>
+											<!-- 데이트레인지 -->
+											<div class="collapse">
+												<div class="input-group daterange-wrp">
+													<input type="text" class="form-control daterange" placeholder="시작일 ~ 종료일">
+													<span class="input-group-btn">
+														<button type="button" class="btn btn-default" onClick="$(this).parent().prev().focus();"><i class="xi-calendar-check"></i></button>
+													</span>
+												</div>
+											</div>
+											<div class="buttons clearfix" data-toggle="buttons">
+												<div class="bx-tb">
+													<label class="btn btn-default active">
+														<input type="radio" name="radio" checked> 전체
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="radio"> 1일 이내
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="radio"> 3일 이내
+													</label>
+												</div>
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="radio" name="radio"> 1주 이내
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="radio"> 2주 이내
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="radio"> 1달 이내
+													</label>
+												</div>
+											</div>
+										</li>
+										<!-- 규모 -->
+										<li>
+											<h4>규모 <small>(소규모는 20명 이하 / 대규모는 50명 이상)</small></h4>
+											<div class="buttons clearfix" data-toggle="buttons">
+												<div class="bx-tb">
+													<label class="btn btn-default active">
+														<input type="radio" name="radio_size" checked> 전체
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="radio"> 소규모
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="radio_size"> 중규모
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="radio_size"> 대규모
+													</label>
+												</div>
+											</div>
+										</li>
+										<!-- 주최 -->
+										<li>
+											<h4>주최 <small>(중복선택 가능)</small></h4>
+											<div class="buttons buttons-checkbox clearfix" data-toggle="buttons">
+												<div class="bx-tb m-tb-col">
+													<label class="btn btn-default">
+														<input type="checkbox"> 대기업
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 공기업
+													</label>
+												</div>
+												<div class="bx-tb m-tb-col">
+													<label class="btn btn-default">
+														<input type="checkbox"> 국가/공공기관
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 기타
+													</label>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<!-- 학생참여 -->
+						<li>
+							<a href="">학생참여 <i class="xi-angle-right"></i></a>
+							<!-- [D] 로켓기지에서 필터와 동일, but 공통부분은 빠짐 -->
+							<ul id="srch-filter-1" class="swiper-wrapper srch-filter">
+								<!-- 기간 -->
+								<li class="swiper-slide">
+									<h3><i class="xi-calendar"></i>기간</h3>
+									<ul class="srch-filter-2">
+										<!-- 활동기간 -->
+										<li>
+											<h4>활동기간 <button type="button" class="btn btn-default btn-direct btn-xs pull-right" onClick="$(this).parent().next().toggle();"><i class="xi-plus"></i> 직접입력</button></h4>
+											<!-- 데이트레인지 -->
+											<div class="collapse">
+												<div class="input-group daterange-wrp">
+													<input type="text" class="form-control daterange" placeholder="시작일 ~ 종료일">
+													<span class="input-group-btn">
+														<button type="button" class="btn btn-default" onClick="$(this).parent().prev().focus();"><i class="xi-calendar-check"></i></button>
+													</span>
+												</div>
+											</div>
+											<div class="buttons clearfix" data-toggle="buttons">
+												<div class="bx-tb">
+													<label class="btn btn-default active">
+														<input type="radio" name="radio2" checked> 전체
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="radio2"> ~1주
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="radio2"> 1주~2주
+													</label>
+												</div>
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="radio" name="radio2"> 2주~1달
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="radio2"> 1달~3달
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="radio2"> 3달~
+													</label>
+												</div>
+											</div>
+										</li>
+										<!-- 모집기한 -->
+										<li>
+											<h4>모임주기 <small>(중복선택 가능)</small></h4>
+											<div class="buttons buttons-checkbox clearfix" data-toggle="buttons">
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="checkbox"> 매주
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 월2회
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 월1회
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 거의없음
+													</label>
+												</div>
+											</div>
+										</li>
+										<!-- 활동성격 -->
+										<li>
+											<h4>활동성격 <small>(중복선택 가능)</small></h4>
+											<div class="buttons buttons-checkbox clearfix" data-toggle="buttons">
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="checkbox"> 온라인 중심
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 온프라인 중심
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 온/오프 병행
+													</label>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<!-- 지역 -->
+								<li class="swiper-slide">
+									<h3><i class="xi-map-marker"></i>지역</h3>
+									<ul class="srch-filter-2">
+										<li>
+											<h4>활동지역 <small>(중복선택 가능)</small></h4>
+											<div class="buttons buttons-checkbox clearfix" data-toggle="buttons">
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="checkbox"> 서울권
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 경기권
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 강원권
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 충청권
+													</label>
+												</div>
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="checkbox"> 전라권
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 경상권
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 제주권
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 기타
+													</label>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<!-- 혜택정보 -->
+								<li class="swiper-slide">
+									<h3><i class="xi-medal"></i>혜택정보</h3>
+									<ul class="srch-filter-2">
+										<!-- 활동혜택 -->
+										<li>
+											<h4>활동혜택 <small>(중복선택 가능)</small></h4>
+											<div class="buttons buttons-checkbox clearfix" data-toggle="buttons">
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="checkbox"> 활동증명
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 봉사인정여부
+													</label>
+												</div>
+											</div>
+										</li>
+										<!-- 우수자혜택 -->
+										<li>
+											<h4>우수자혜택 <small>(중복선택 가능)</small></h4>
+											<div class="buttons buttons-checkbox clearfix" data-toggle="buttons">
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="checkbox"> 입사 시 가산점
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 포상여부
+													</label>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<!-- 해외탐방 -->
+						<li>
+							<a href="">해외탐방 <i class="xi-angle-right"></i></a>
+							<!-- [D] 로켓기지에서 필터와 동일, but 공통부분은 빠짐 -->
+							<ul id="srch-filter-2" class="swiper-wrapper srch-filter">
+								<!-- 기간 -->
+								<li class="swiper-slide">
+									<h3><i class="xi-calendar"></i>기간</h3>
+									<ul class="srch-filter-2">
+										<!-- 활동기간 -->
+										<li>
+											<h4>활동기간 <button type="button" class="btn btn-default btn-direct btn-xs pull-right" onClick="$(this).parent().next().toggle();"><i class="xi-plus"></i> 직접입력</button></h4>
+											<!-- 데이트레인지 -->
+											<div class="collapse">
+												<div class="input-group daterange-wrp">
+													<input type="text" class="form-control daterange" placeholder="시작일 ~ 종료일">
+													<span class="input-group-btn">
+														<button type="button" class="btn btn-default" onClick="$(this).parent().prev().focus();"><i class="xi-calendar-check"></i></button>
+													</span>
+												</div>
+											</div>
+											<div class="buttons clearfix" data-toggle="buttons">
+												<div class="bx-tb">
+													<label class="btn btn-default active">
+														<input type="radio" name="radio2" checked> 전체
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="radio2"> ~1주
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="radio2"> 1주~2주
+													</label>
+												</div>
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="radio" name="radio2"> 2주~1달
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="radio2"> 1달~3달
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="radio2"> 3달~
+													</label>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<!-- 지역 -->
+								<li class="swiper-slide">
+									<h3><i class="xi-map-marker"></i>지역</h3>
+									<ul class="srch-filter-2">
+										<li>
+											<h4>활동지역 <small>(중복선택 가능)</small></h4>
+											<div class="buttons buttons-checkbox clearfix" data-toggle="buttons">
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="checkbox"> 유럽
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 미주/중남미
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 남태평양
+													</label>
+												</div>
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="checkbox"> 동남아
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 중국/일본
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 아프리카
+													</label>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<!-- 혜택정보 -->
+								<li class="swiper-slide">
+									<h3><i class="xi-medal"></i>혜택정보</h3>
+									<ul class="srch-filter-2">
+										<!-- 활동혜택 -->
+										<li>
+											<h4>무료/유료 <small>(중복선택 가능)</small></h4>
+											<div class="buttons buttons-checkbox clearfix" data-toggle="buttons">
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="checkbox"> 무료
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 일부지원
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 유료
+													</label>
+												</div>
+											</div>
+										</li>
+										<!-- 우수자혜택 -->
+										<li>
+											<h4>우수자혜택 <small>(중복선택 가능)</small></h4>
+											<div class="buttons buttons-checkbox clearfix" data-toggle="buttons">
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="checkbox"> 입사 시 가산점
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 포상여부
+													</label>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<!-- 공모전 -->
+						<li>
+							<a href="">공모전 <i class="xi-angle-right"></i></a>
+							<!-- [D] 로켓기지에서 필터와 동일, but 공통부분은 빠짐 -->
+							<ul id="srch-filter-3" class="swiper-wrapper srch-filter">
+								<!-- 혜택정보 -->
+								<li class="swiper-slide">
+									<h3><i class="xi-medal"></i>혜택정보</h3>
+									<ul class="srch-filter-2">
+										<li>
+											<h4>무료/유료</h4>
+											<div class="buttons clearfix" data-toggle="buttons">
+												<div class="bx-tb">
+													<label class="btn btn-default active">
+														<input type="radio" checked> 전체
+													</label>
+													<label class="btn btn-default">
+														<input type="radio"> 1000만원
+													</label>
+													<label class="btn btn-default">
+														<input type="radio"> 2000만원
+													</label>
+												</div>
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="radio"> 3000만원
+													</label>
+													<label class="btn btn-default">
+														<input type="radio"> 5000만원
+													</label>
+													<label class="btn btn-default">
+														<input type="radio"> 5000만원 이상
+													</label>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<!-- 분야 -->
+								<li class="swiper-slide">
+									<h3><i class="xi-book-spread"></i>분야</h3>
+									<ul class="srch-filter-2">
+										<li>
+											<h4>분야 <small>(중복선택 가능)</small></h4>
+											<div class="buttons buttons-checkbox clearfix" data-toggle="buttons">
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="checkbox"> 광고/마케팅
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 디자인
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 영상/사진
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 기타
+													</label>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<!-- 봉사활동 -->
+						<li>
+							<a href="">봉사활동 <i class="xi-angle-right"></i></a>
+							<!-- [D] 로켓기지에서 필터와 동일, but 공통부분은 빠짐 -->
+							<ul id="srch-filter-4" class="swiper-wrapper srch-filter">
+								<!-- 기간 -->
+								<li class="swiper-slide">
+									<h3><i class="xi-calendar"></i>기간</h3>
+									<ul class="srch-filter-2">
+										<!-- 활동기간 -->
+										<li>
+											<h4>활동기간 <button type="button" class="btn btn-default btn-direct btn-xs pull-right" onClick="$(this).parent().next().toggle();"><i class="xi-plus"></i> 직접입력</button></h4>
+											<!-- 데이트레인지 -->
+											<div class="collapse">
+												<div class="input-group daterange-wrp">
+													<input type="text" class="form-control daterange" placeholder="시작일 ~ 종료일">
+													<span class="input-group-btn">
+														<button type="button" class="btn btn-default" onClick="$(this).parent().prev().focus();"><i class="xi-calendar-check"></i></button>
+													</span>
+												</div>
+											</div>
+											<div class="buttons clearfix" data-toggle="buttons">
+												<div class="bx-tb">
+													<label class="btn btn-default active">
+														<input type="radio" name="radio2" checked> 전체
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="radio2"> ~1주
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="radio2"> 1주~2주
+													</label>
+												</div>
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="radio" name="radio2"> 2주~1달
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="radio2"> 1달~3달
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="radio2"> 3달~
+													</label>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<!-- 지역 -->
+								<li class="swiper-slide">
+									<h3><i class="xi-map-marker"></i>지역</h3>
+									<ul class="srch-filter-2">
+										<li>
+											<h4>활동지역 <small>(중복선택 가능)</small></h4>
+											<div class="buttons buttons-checkbox clearfix" data-toggle="buttons">
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="checkbox"> 유럽
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 미주/중남미
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 남태평양
+													</label>
+												</div>
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="checkbox"> 동남아
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 중국/일본
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 아프리카
+													</label>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<!-- 혜택정보 -->
+								<li class="swiper-slide">
+									<h3><i class="xi-medal"></i>혜택정보</h3>
+									<ul class="srch-filter-2">
+										<li>
+											<h4>무료/유료</h4>
+											<div class="buttons clearfix" data-toggle="buttons">
+												<div class="bx-tb">
+													<label class="btn btn-default active">
+														<input type="radio" checked> 전체
+													</label>
+													<label class="btn btn-default">
+														<input type="radio"> 1000만원
+													</label>
+													<label class="btn btn-default">
+														<input type="radio"> 2000만원
+													</label>
+												</div>
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="radio"> 3000만원
+													</label>
+													<label class="btn btn-default">
+														<input type="radio"> 5000만원
+													</label>
+													<label class="btn btn-default">
+														<input type="radio"> 5000만원 이상
+													</label>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<!-- 분야 -->
+								<li class="swiper-slide">
+									<h3><i class="xi-book-spread"></i>분야</h3>
+									<ul class="srch-filter-2">
+										<li>
+											<h4>분야 <small>(중복선택 가능)</small></h4>
+											<div class="buttons buttons-checkbox clearfix" data-toggle="buttons">
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="checkbox"> 교육
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 문화/행사
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 행정지원
+													</label>
+												</div>
+												<div class="bx-tb">
+													<label class="btn btn-default">
+														<input type="checkbox"> 생활편의지원
+													</label>
+													<label class="btn btn-default">
+														<input type="checkbox"> 기타
+													</label>
+													<label class="btn btn-default">
+
+													</label>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<!-- 하단고정메뉴 -->
+			<div class="btm-fixed">
+				<div class="btnarea">
+					<div>
+						<button type="button" class="btn btn-default btn-block btn-lg">취소하기</button>
+					</div>
+					<div>
+						<button type="submit" class="btn btn-primary btn-block btn-lg">저장하기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// mypage include -->
+
+	</div>
+	<!--// container -->
+
+	<!-- footer -->
+	<footer id="ft">
+		<div class="container-fluid">
+			<h2 class="font-sp color-red"><i class="xi-rocket"></i> <strong>ROCKET</strong></h2>
+			<div class="ft-sns">
+				<a href="" target="_blank" title="페이스북"><i class="xi-facebook"></i><span class="sr-only">페이스북</span></a>
+				<a href="" target="_blank" title="카카오스토리"><i class="xi-kakaostory"></i><span class="sr-only">카카오스토리</span></a>
+			</div>
+			<div class="ft-policy">
+				<ul class="ft-mn list-inline">
+					<li><a href="info_about.html">서비스 소개</a></li>
+					<li><a href="info_terms.html">이용약관</a></li>
+					<li><a href="privacy.html">개인정보취급방침</a></li>
+					<li><a href="info_faq.html">고객센터</a></li>
+					<li><a href="info_collaboration.html">제휴문의</a></li>
+				</ul>
+				<address>COPYRIGHT &copy; ROCKET. All RIGHTS RESERVED</address>
+			</div>
+		</div>
+		<a id="goTop" href="#wrap"><i class="xi-up-square"></i><span class="sr-only">위로</span></a>
+	</footer>
+	<!--// footer -->
+
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<!-- lib -->
+<script src="assets/libs/Swiper/js/swiper.jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<!-- common -->
+<script src="assets/js/common.js"></script>
+<!--
+<script src="assets/js/sidebar.js"></script>
+-->
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Rocket</title>
+
+<!-- css -->
+<link rel="stylesheet" href="assets/css/import.css">
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<header id="hd" class="hd-fixed">
+		<h1 class="ellipsis hidden-lg hidden-md animated lightSpeedIn ani-duration15">ROCKET</h1>
+		<!-- 좌측 -->
+		<div id="hdLt" class="hd-icon-wrp-lt animated fadeInLeft">
+			<!-- 검색/맞춤 버튼 : 메인과 알림로켓에서만 검색 아이콘 xi-bell xi-magnifier -->
+			<a class="hd-icon" href="" aria-expanded="false" aria-controls="searchTitle" title="검색 더보기" onClick="menuOpen('side-nav-left');return false;"><i class="xi-magnifier"></i><span class="sr-only">검색 더보기</span></a>
+		</div>
+		<!-- 아이로켓 : 오늘 본 페이지-->
+		<div id="I-Rocket" class="login-gate animated rollIn">
+			<div>
+				<a href="" data-toggle="modal" data-target="#todayViewed"><span class="sr-only">오늘 본 페이지</span></a>
+			</div>
+		</div>
+		<!-- 우측 -->
+		<div id="hdRt" class="hd-icon-wrp-rt animated fadeInRight">
+			<a class="hd-icon" href="guide.html" title="사용매뉴얼"><i class="xi-paper"></i><span class="sr-only">사용매뉴얼</span></a>
+			<a class="hd-icon" href="" title="로그인/회원가입" onClick="menuOpen('side-nav-right');return false;"><i class="xi-user"></i><span class="sr-only">로그인/회원가입</span></a>
+		</div>
+		<!-- gnb 
+			[D]  로그인 class=after_login 로 구분
+		-->
+		<nav id="gnb" class="gnb">
+			<ul>
+				<li><h2><a class="font-sp color_rocket" href="index.html"><i class="xi-rocket"></i><span>Rocket</span></a></h2></li>
+				<li class="active"><a href="rocket.html"><i class="xi-satellite"></i><span>로켓기지</span></a></li>
+				<li><a href="recommend.html"><i class="xi-present"></i><span>알림로켓<b class="animated rubberBand">12</b></span></a></li>
+				<li><a href="scrap.html"><i class="xi-tagged-book"></i><span>찜한로켓<b class="animated rubberBand">?</b></span></a></li>
+				<li><a href="mypage_member.html"><i class="xi-flag-triangle"></i><span>탑승로켓<b class="animated rubberBand">8</b></span></a></li>
+			</ul>
+		</nav>
+	</header>
+	<!--// header -->
+
+	<!-- container : mypage -->
+	<div id="container" class="container-mypage">
+
+<!-- mypage include -->
+
+<div id="mypage" class="page-mypage page-join">
+	<!-- 상단고정 -->
+	<section class="sub-top">
+		<div class="w1200">
+			<h1 class="font-ns ellipsis animated fadeIn">회원가입</h1>
+			<div class="visible-xs-block visible-sm-block">
+				<!-- 좌측 : 뒤로가기 등 -->
+				<div class="hd-icon-wrp-lt">
+					<a class="nav-close animated fadeInLeft" href=""><span class="sr-only">뒤로가기</span><i class="xi2-angle-left-thin"></i></a>
+				</div>
+				<!-- 우측 -->
+				<div class="hd-icon-wrp-rt">
+					<a class="btn btn-sm btn-border-wh" href="" data-toggle="modal" data-target="#login">로그인</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 가입단계표시 -->
+	<nav class="nav-fixed">
+		<ul class="nav">
+			<li><a>1. 소셜계정가입</a></li>
+			<li class="active"><a>2. 필수정보입력</a></li>
+			<li><a>3. 퀵 알림설정</a></li>
+		</ul>
+	</nav>
+	<form id="join2" class="w1200">
+		<!-- 기본정보 설정 -->
+		<section class="card3 form-horizontal">
+			<header class="card-hd">
+				<h2 class="h2">기본정보 설정</h2>
+			</header>
+			<div class="form-group">
+				<label for="" class="col-xs-3 control-label">이름</label>
+				<div class="col-xs-9">
+					<input type="text" class="form-control" id="" placeholder="" value="홍길동" readonly>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-xs-3 control-label">이메일</label>
+				<div class="col-xs-9">
+					<input type="text" class="form-control" id="" placeholder="" value="rocket@naver.com" readonly>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-xs-3 control-label">프로필 <br class="visible-xs-block">사진</label>
+				<div class="col-xs-9">
+					<div class="col-sm-2 col-xs-6">
+						<button type="button" class="no-style" title="사진 변경">
+							<img class="img-circle img-responsive" src="https://pbs.twimg.com/profile_images/1521634630/image.jpg" alt="profile">
+						</button>
+					</div>
+					<div class="col-sm-8 col-xs-6 pt20">
+						<button type="button" class="btn btn-default">사진 변경</button>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-xs-3 control-label">성별</label>
+				<div class="col-xs-9">
+					<div class="buttons buttons-checkbox clearfix" data-toggle="buttons">
+						<div class="bx-tb">
+							<label class="btn btn-default active">
+								<input type="radio" name="sex" checked=""> 남자
+							</label>
+							<label class="btn btn-default">
+								<input type="radio" name="sex"> 여자
+							</label>
+							<label class="btn btn-default">
+								<input type="radio" name="sex"> 기타
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-xs-3 control-label">자기소개</label>
+				<div class="col-xs-9">
+					<textarea class="form-control" rows="5" id="" placeholder="자기소개입니다">자기소개입니다</textarea>
+				</div>
+			</div>
+		</section>
+		<!-- 하단고정메뉴 -->
+		<div class="btm-fixed">
+			<div class="btnarea">
+				<div>
+					<button type="button" class="btn btn-default btn-block btn-lg">로켓기지로</button>
+				</div>
+				<div>
+					<button type="button" class="btn btn-primary btn-block btn-lg">퀵 알림설정하기</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+<!--// content include -->
+
+	</div>
+	<!--// container -->
+
+	<!-- footer -->
+	<footer id="ft">
+		<div class="container-fluid">
+			<h2 class="font-sp color-red"><i class="xi-rocket"></i> <strong>ROCKET</strong></h2>
+			<div class="ft-sns">
+				<a href="" target="_blank" title="페이스북"><i class="xi-facebook"></i><span class="sr-only">페이스북</span></a>
+				<a href="" target="_blank" title="카카오스토리"><i class="xi-kakaostory"></i><span class="sr-only">카카오스토리</span></a>
+			</div>
+			<div class="ft-policy">
+				<ul class="ft-mn list-inline">
+					<li><a href="info_about.html">서비스 소개</a></li>
+					<li><a href="info_terms.html">이용약관</a></li>
+					<li><a href="privacy.html">개인정보취급방침</a></li>
+					<li><a href="info_faq.html">고객센터</a></li>
+					<li><a href="info_collaboration.html">제휴문의</a></li>
+				</ul>
+				<address>COPYRIGHT &copy; ROCKET. All RIGHTS RESERVED</address>
+			</div>
+		</div>
+		<a id="goTop" href="#wrap"><i class="xi-up-square"></i><span class="sr-only">위로</span></a>
+	</footer>
+	<!--// footer -->
+
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<!-- lib -->
+<script src="assets/libs/Swiper/js/swiper.jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<!-- common -->
+<script src="assets/js/common.js"></script>
+<!--
+<script src="assets/js/sidebar.js"></script>
+-->
+</body>
+</html>

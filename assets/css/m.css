@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+.h2{ font-size: 18px}
+
+/* form */
+.btn-group-lg>.btn, .btn-lg{ padding:13px; font-size: 17px;}
+.form-horizontal .control-label{ padding-right: 0;white-space: nowrap}
+
+/* nav */
+.nav-fixed{ margin-bottom: 15px}
+.nav-fixed .nav>li>a{ font-size: 14px}
+
+/* Popover */
+.popover-content{ padding: 8px; font-size: 12px;}
+
+/* layout */
+#wrap{ padding:48px 0}
+.hd-fixed,.sub-top{ height:48px; line-height:48px}
+.hd-fixed h1,.sub-top h1{ padding:0 48px;line-height:48px}
+.page-mypage{ min-height:calc(100vh - 48px); margin-bottom: -48px; padding-bottom: 48px}
+/* hd */
+.hd-icon-wrp{ font-size:18px; line-height:48px}
+.hd-icon,.nav-close{ width:48px; font-size:20px;line-height:48px}
+.hd-icon-wrp-rt .hd-icon,.side-nav .hd-icon{ width:48px}
+#gnb{ height:48px}
+.gnb li>a{ font-size:11px;}
+.gnb li>:not(h2) i{height:6px; margin-top:7px; font-size:20px;}
+.gnb h2{ padding-top:12px; font-size:24px;}
+#I-Rocket a{ width:50px; height:50px; margin-top:-2px;background-size:96% auto;/*-webkit-animation-duration:10s; -webkit-animation-iteration-count:infinite;-webkit-animation-name:I-Rocket; */}
+#I-Rocket a:before{ display:none}
+.ft-sns{ padding-top:0}
+
+.side-nav{width:100%;}
+.side-nav-left{-webkit-transform:translate(-100%,0);transform:translate(-100%,0)}
+.side-nav>header{ height:48px; padding-left:48px}
+.side-nav>div,.tab-category{top:48px}
+.nav-close{ width:48px; line-height:48px}
+#iSrch .form-control{ height:48px; padding-right: 48px}
+.quick-keyword li{ width: 25%}
+
+.tab-category a{ padding:10px 0 8px; border-bottom-width:2px; font-size:14px;}
+.tab-category+*{ margin-top:40px}
+.frm-srch .form-control{ height:44px; padding:14px 10px; font-size:14px}
+.frm-srch .btn{ position:relative; width:52px;height:44px;padding:6px; font-size:18px}
+.frm-srch .btn:last-child:before{ content:''; display:block; position:absolute;top:50%;left:-1px; height:32px; margin-top:-15px; border-left:1px solid #EEE}
+.srch-filter h3{ display:none;}
+.srch-filter-pn{ display: table; table-layout: fixed; width: 100%}
+.srch-filter-pn a{ display: table-cell;height:56px; padding: 0; border-bottom:2px solid transparent; background:#FFF;font-weight:400; font-size:13px; text-align: center; vertical-align: middle}
+.srch-filter-pn a i{ display:block; margin:2px 0 4px; font-size:20px}
+.srch-filter-pn .active{ border-color:#E53934; color:#E53934}
+.srch-filter-2{ min-height: 160px; padding:12px;}
+.srch-filter-2>li+li{ padding-top:12px}
+.m-tb-col{ float:left; width:50%}
+.filter-select{ padding:0 40px 0 0}
+.filter-select .list-inline{ padding:11px 12px; font-size:13px}
+.filter-select>button{top:0; right:0; width:40px; height:100%; border-width:0 0 0 1px}
+
+.hd-lst h2{ font-size:14px}
+/*
+.hd-lst{ margin:12px -8px 0}
+.sort-wrp .btn{ padding-top:4px; padding-bottom:4px}
+.sort-type-wrp .btn{ padding:4px 8px}
+*/
+.d-day{top:-20px; width:48px; height:48px; font-size:14px; line-height:64px}
+.lst-card{margin:4px}
+.hd-lst+.lst-card{ margin-top:-4px}
+.rocket{ width:50%; padding:4px; font-size:12px}
+.rocket .category{ font-size:13px}
+.rocket .hover-cnt{ margin-top:-68px;padding:12px}
+.rocket .hover-cnt .category-wrp{ margin:-40px 0 15px}
+.rocket h5{ margin:12px 0; font-size:15px}
+.rocket h5 .tit{ overflow:hidden; height:40px;}
+.rocket h5 strong{ margin-bottom:.2em; font-size:12px}
+.rocket h5~div{ overflow:hidden; white-space:nowrap; text-overflow:ellipsis}
+.rocket .fdb-btn{bottom:52px; right:8px;}
+.rocket .fdb-btn button{width:36px; height:36px;font-size:15px; line-height:36px; color:#E53934}
+[dir=rtl] .rocket .fdb-btn{left:8px}
+.rocket-lst{ width:100% !important}
+.rocket-lst h5{ font-size:15px;}
+.rocket-lst h5 strong{ font-size:13px;}
+.lst-card-sm .rocket-lst h5{ font-size:14px}
+
+/* mypage */
+.open-nav-sidebar .page-sidebar{top:48px}
+.nav-sidebar .nav>li>a{ padding: 14px 0 12px;}
+.page-mypage .srch-filter-2{ padding: 15px 12px; border-bottom:1px solid #ddd;background:#F6F6F6;}
+.page-mypage .srch-filter-btn{ position:static; width:100%; height:auto; padding:4px 12px; font-size:15px; text-align:left}
+.page-mypage .srch-filter-btn i{ display:inline-block;}

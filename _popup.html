@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Rocket</title>
+
+<!-- css -->
+<link rel="stylesheet" href="assets/css/import.css">
+<!-- js -->		
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<!-- Modal-->
+<div id="apply" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title font_sp">지원서 보내기</h4>
+			</div>
+			<div class="modal-body">
+
+<form class="form-horizontal">
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			 <p class="form-control-static"><strong>[삼성전자] 삼성전자 SLP 21기 모집</strong></p>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="" class="col-sm-2 control-label">지원서 다운로드</label>
+		<div class="col-sm-10">
+			<a class="btn bg_green" href="#"><strong>지원서 다운로드</strong></a>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="" class="col-sm-2 control-label">제목</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="" placeholder="">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="" class="col-sm-2 control-label">내용</label>
+		<div class="col-sm-10">
+			<textarea class="form-control" rows="10" id="" placeholder=""></textarea>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="" class="col-sm-2 control-label">첨부하기</label>
+		<div class="col-sm-10">
+			<input type="file" class="form-control" id="">
+			<!-- 파일업로드 -->
+			<ul class="list-inline form-control-static">
+				<li><a href="">홍길동_포트폴리오.ppt</a> <button type="button" class="btn btn-xs" title="삭제"><span aria-hidden="true">&times;</span></button></li>
+				<li><a href="">홍길동_자소서.hwp</a> <button type="button" class="btn btn-xs" title="삭제"><span aria-hidden="true">&times;</span></button></li>
+			</ul>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> 내 메일로 함께 발송
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="row form_btn pb20">
+		<div class=" col-sm-offset-2 col-sm-4 pr10">
+			<button type="button" class="btn btn-default btn-lg btn-block" data-dismiss="modal" aria-label="Close">취소하기</button>
+		</div>
+		<div class="col-sm-4 pl10">
+			<button type="submit" class="btn btn-primary btn-lg btn-block">지원하기</button>
+		</div>
+	</div>
+</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+$('#apply').modal('show')
+</script>
+
+<!-- js -->
+<!-- lib -->
+<script src="assets/libs/Swiper/js/swiper.jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<!-- common -->
+<script src="assets/js/common.js"></script>
+<!--
+<script src="assets/js/sidebar.js"></script>
+-->
+</body>
+</html>
