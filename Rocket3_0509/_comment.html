@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Rocket</title>
+
+<!-- css -->
+<link rel="stylesheet" href="assets/css/import.css">
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<!-- view -->
+<div id="view" class="view">
+	<!-- nav -->
+	<section class="view-top hd-fixed">
+		<h1 class="font-sp ellipsis">로켓 상세</h1>
+		<!-- 좌측 -->
+		<div class="hd-icon-wrp-lt visible-xs-block">
+			<a class="nav-close animated fadeInLeft" href="#snb" onClick="viewClose();return false;"><span class="sr-only">닫기</span><i class="xi2-angle-left-thin"></i></a>
+		</div>
+		<!-- 우측 -->
+		<div class="hd-icon-wrp-rt hd-icon-wrp">
+			<!-- [D] 
+				지원서 : #apply
+				이메일 지원서 : #applyMail
+				지원종료 후 disabled
+				<a class="btn btn-primary btn-block" href="#apply" data-toggle="modal" data-target="#apply"><span class="animated flash"><i class="xi-rocket"></i>지원하기</span></a>
+			-->
+			<a class="hd-icon animated bounceIn" href="#apply" data-toggle="modal" data-target="#apply" title="지원하기"><span class="sr-only">지원하기</span><i class="xi-rocket"></i></a>
+			<a class="hd-icon" href="" onclick="$(this).toggleClass('animated jello').find('i').toggleClass('xi-heart xi-check');return false;" title="찜하기"><span class="sr-only">찜하기</span><i class="xi-heart"></i></a>
+			<a class="hd-icon" href="" data-toggle="modal" data-target="#sns" title="공유하기"><span class="sr-only">공유하기</span><i class="xi-share-alt"></i></a>
+		</div>
+	</section>
+	<article class="view-article">
+		<!-- 제목 -->
+		<header class="view-hd">
+			<h1>
+				<span class="corp">[삼성전자]</span>
+				SLP 삼성 글로벌 리더쉽 프로그램 13기 모집합니다.
+			</h1>
+		</header>
+		<!-- 커뮤니티 
+			[D] 추후 1) 리뷰 2) 댓글로 분리되야 함
+		-->
+		<div id="viewCommunity" class="card3">
+			<h2 class="sr-only">커뮤니티</h2>
+			<!-- 현 버전에서 지원자 보기(X) : 당분간 조회자 통계(O) -->
+			<section id="viewApplicant" class="applicant-wrp">
+				<h3 class="h3">이 로켓을 <span class="color-red">누가</span> 봤을까요?</h3>
+				<div>
+					<!-- 통계 -->
+					<div class="statics">
+						<div>
+							<figure class="knob">
+								<input type="text" class="dial" data-min="0" data-max="100" data-thickness=".1" value="55" data-readOnly="true" data-width="100" data-height="100" data-bgColor="#DDDDDD" data-fgColor="#E53934">
+								<figcaption>여자</figcaption>
+							</figure>
+						</div>
+						<div>
+							<i class="xi-toilet"></i>
+						</div>
+						<div>
+							<figure class="knob">
+								<input type="text" class="dial" data-min="0" data-max="100" data-thickness=".1" value="45" data-readOnly="true" data-width="100" data-height="100" data-bgColor="#DDDDDD" data-fgColor="#232f4a">
+								<figcaption>남자</figcaption>
+							</figure>
+						</div>
+					</div>
+					<!-- [D] 지원자 정보 : 프라이버시 문제로 본사람 정보는 노출X
+					<div class="people_det">
+						<ul class="applicant_lst row clearfix">
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/female.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/male.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/female.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/female.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/male.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/male.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/male.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/male.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/female.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/female.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/male.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+						</ul>
+					</div>
+					-->
+				</div>
+			</section>
+			<!-- 댓글 -->
+			<section id="viewCmt" class="view-cmt">
+				<h3 class="h3">댓글 <span class="cmt-count font-sp color-red">168</span> <a class="pull-right" href="">더보기 <i class="xi-angle-right"></i></a></h3>
+				<form class="media frm-wrt">
+					<div class="media-body">
+						<textarea class="form-control" placeholder="댓글을 입력해주세요"></textarea>
+					</div>
+					<div class="media-right">
+						<button type="button" class="btn bg-navy">등록</button>
+					</div>
+				</form>
+				<div class="cmt-sort">
+					<a class="active" href=""><i class="xi-check"></i> 최신순</a> <span></span> <a href=""><i class="xi-check"></i> 좋아요순</a>
+				</div>
+				<ul class="lst-cmt">
+					<!-- 이 로켓의 권한자 class=cmt-master -->
+					<li class="cmt-master">
+						<div class="cmt-hd clearfix">
+							<div class="pull-left">
+								<a class="name" href="">
+									<img class="img-circle" src="assets/img/female.png" alt=""> 마스터
+								</a>
+								<small class="date font-sp">40분 전</small>
+							</div>
+							<div class="pull-right react dropdown">
+								<button type="button" class="no-style dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="xi-ellipsis-v"></i><span class="sr-only">더보기</span></button>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href=""><i class="xi-lock"></i> <span>신고</span></a></li>
+									<!-- 권한자 -->
+									<li><a href=""><i class="xi-eraser"></i> <span>수정</span></a></li>
+									<li><a href=""><i class="xi-trash"></i> <span>삭제</span></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="cnt">
+							안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요. 안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요.
+						</div>
+						<div class="cmt-ft react clearfix">
+							<div class="pull-left">
+							</div>
+							<div class="pull-right">
+								<button type="button" class="no-style color-red"><i class="xi-heart"></i><span class="sr-only">좋아요</span> 14</button>
+								<button type="button" class="no-style" onClick="$(this).parents('.cmt-ft').next().toggle();"><i class="xi-message"></i><span class="hidden-xs">대댓글</span> 12</button>
+							</div>
+						</div>
+						<!-- 대댓글 -->
+						<div class="lst-cmt-re" style="display:block">
+							<ul>
+								<li>
+									<div class="cmt-hd clearfix">
+										<div class="pull-left">
+											<a class="name" href="">
+												<img class="img-circle" src="assets/img/female.png" alt=""> 홍길동
+											</a>
+											<small class="date font-sp">2016.08.18 21:34</small>
+										</div>
+										<div class="pull-right react dropdown">
+											<button type="button" class="no-style dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="xi-ellipsis-v"></i><span class="sr-only">더보기</span></button>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li><a href=""><i class="xi-lock"></i> <span>신고</span></a></li>
+												<!-- 권한자 -->
+												<li><a href=""><i class="xi-eraser"></i> <span>수정</span></a></li>
+												<li><a href=""><i class="xi-trash"></i> <span>삭제</span></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="cnt">
+										안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요. 안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요.
+									</div>
+									<div class="cmt-ft react clearfix">
+										<div class="pull-left">
+										</div>
+										<div class="pull-right">
+											<button type="button" class="no-style color-red"><i class="xi-heart"></i><span class="sr-only">좋아요</span> 14</button>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="cmt-hd clearfix">
+										<div class="pull-left">
+											<a class="name" href="">
+												<img class="img-circle" src="assets/img/female.png" alt=""> 홍길동
+											</a>
+											<small class="date font-sp">2016.08.18 21:34</small>
+										</div>
+										<div class="pull-right react dropdown">
+											<button type="button" class="no-style dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="xi-ellipsis-v"></i><span class="sr-only">더보기</span></button>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li><a href=""><i class="xi-lock"></i> <span>신고</span></a></li>
+												<!-- 권한자 -->
+												<li><a href=""><i class="xi-eraser"></i> <span>수정</span></a></li>
+												<li><a href=""><i class="xi-trash"></i> <span>삭제</span></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="cnt">
+										안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요. 안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요.
+									</div>
+									<div class="cmt-ft react clearfix">
+										<div class="pull-left">
+										</div>
+										<div class="pull-right">
+											<button type="button" class="no-style color-red"><i class="xi-heart"></i><span class="sr-only">좋아요</span> 14</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="btn-more-wrp">
+								<a class="btn-more card" href="">대댓글 더보기 <i class="xi-plus"></i></a>
+							</div>
+							<form class="media frm-wrt">
+								<div class="media-body">
+									<textarea class="form-control" placeholder="대댓글을 입력해주세요"></textarea>
+								</div>
+								<div class="media-right">
+									<button type="button" class="btn bg-navy">등록</button>
+								</div>
+							</form>
+							<div class="btn-ctm-clse-wrp">
+								<button type="button" class="btn-ctm-clse" onClick="$(this).parents('.lst-cmt-re').hide();">대댓글 닫기 <i class="xi-angle-up"></i></button>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cmt-hd clearfix">
+							<div class="pull-left">
+								<a class="name" href="">
+									<img class="img-circle" src="assets/img/female.png" alt=""> 홍길동
+								</a>
+								<small class="date font-sp">2016.08.18 21:34</small>
+							</div>
+							<div class="pull-right react dropdown">
+								<button type="button" class="no-style dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="xi-ellipsis-v"></i><span class="sr-only">더보기</span></button>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href=""><i class="xi-lock"></i> <span>신고</span></a></li>
+									<!-- 권한자 -->
+									<li><a href=""><i class="xi-eraser"></i> <span>수정</span></a></li>
+									<li><a href=""><i class="xi-trash"></i> <span>삭제</span></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="cnt">
+							안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요. 안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요.
+						</div>
+						<div class="cmt-ft react clearfix">
+							<div class="pull-left">
+							</div>
+							<div class="pull-right">
+								<button type="button" class="no-style color-red"><i class="xi-heart"></i><span class="sr-only">좋아요</span> 14</button>
+								<button type="button" class="no-style"><i class="xi-message"></i><span class="hidden-xs">대댓글</span> 12</button>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cmt-hd clearfix">
+							<div class="pull-left">
+								<a class="name" href="">
+									<img class="img-circle" src="assets/img/female.png" alt=""> 홍길동
+								</a>
+								<small class="date font-sp">2016.08.18 21:34</small>
+							</div>
+							<div class="pull-right react dropdown">
+								<button type="button" class="no-style dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="xi-ellipsis-v"></i><span class="sr-only">더보기</span></button>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href=""><i class="xi-lock"></i> <span>신고</span></a></li>
+									<!-- 권한자 -->
+									<li><a href=""><i class="xi-eraser"></i> <span>수정</span></a></li>
+									<li><a href=""><i class="xi-trash"></i> <span>삭제</span></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="cnt">
+							안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요. 안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요.
+						</div>
+						<div class="cmt-ft react clearfix">
+							<div class="pull-left">
+							</div>
+							<div class="pull-right">
+								<button type="button" class="no-style color-red"><i class="xi-heart"></i><span class="sr-only">좋아요</span> 14</button>
+								<button type="button" class="no-style"><i class="xi-message"></i><span class="hidden-xs">대댓글</span> 12</button>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cmt-hd clearfix">
+							<div class="pull-left">
+								<a class="name" href="">
+									<img class="img-circle" src="assets/img/female.png" alt=""> 홍길동
+								</a>
+								<small class="date font-sp">2016.08.18 21:34</small>
+							</div>
+							<div class="pull-right react dropdown">
+								<button type="button" class="no-style dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="xi-ellipsis-v"></i><span class="sr-only">더보기</span></button>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href=""><i class="xi-lock"></i> <span>신고</span></a></li>
+									<!-- 권한자 -->
+									<li><a href=""><i class="xi-eraser"></i> <span>수정</span></a></li>
+									<li><a href=""><i class="xi-trash"></i> <span>삭제</span></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="cnt">
+							안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요. 안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요.
+						</div>
+						<div class="cmt-ft react clearfix">
+							<div class="pull-left">
+							</div>
+							<div class="pull-right">
+								<button type="button" class="no-style color-red"><i class="xi-heart"></i><span class="sr-only">좋아요</span> 14</button>
+								<button type="button" class="no-style"><i class="xi-message"></i><span class="hidden-xs">대댓글</span> 12</button>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- [D] 더보기는 새창으로 -->
+				<a class="btn-more" href="">댓글 더보기 <i class="xi-plus"></i></a>
+			</section>
+		</div>
+	</article>
+</div>
+
+<!-- js -->
+<!-- lib -->
+<script src="assets/libs/Swiper/js/swiper.jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<script src="assets/libs/jquery.knob.min.js"></script>
+<!-- common -->
+<script src="assets/js/common.js"></script>
+
+<!-- page -->
+<script>
+// http://anthonyterrien.com/knob/
+$("input.dial").knob();
+$('body').scrollspy({
+	target:'#viewNav',
+	offset:48
+});
+
+// scroll
+var viewNav = $('nav.view-nav');
+$(window).scroll(function(){
+	if($(this).scrollTop()>viewNav.offset().top){
+		$('body').addClass('view-scroll');
+	} else {
+		$('body').removeClass('view-scroll');
+	}
+});
+</script>
+
+</body>
+</html>
