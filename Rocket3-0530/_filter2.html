@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Rocket</title>
+
+<!-- css -->
+<link rel="stylesheet" href="assets/css/import.css">
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<header id="hd" class="hd-fixed">
+		<h1 class="ellipsis hidden-lg hidden-md animated lightSpeedIn ani-duration15">ROCKET</h1>
+		<!-- 좌측 -->
+		<div id="hdLt" class="hd-icon-wrp-lt animated fadeInLeft">
+			<!-- 검색/맞춤 버튼 : 메인과 알림로켓에서만 검색 아이콘 xi-bell xi-magnifier -->
+			<a class="hd-icon" href="" aria-expanded="false" aria-controls="searchTitle" title="검색 더보기" onClick="menuOpen('side-nav-left');return false;"><i class="xi-magnifier"></i><span class="sr-only">검색 더보기</span></a>
+		</div>
+		<!-- 아이로켓 : 오늘 본 페이지-->
+		<div id="I-Rocket" class="login-gate animated rollIn">
+			<div>
+				<a href=""></a>
+			</div>
+		</div>
+		<!-- 우측 -->
+		<div id="hdRt" class="hd-icon-wrp-rt animated fadeInRight">
+			<a class="hd-icon" href="guide.html" title="사용매뉴얼"><i class="xi-paper"></i><span class="sr-only">사용매뉴얼</span></a>
+			<a class="hd-icon" href="" title="로그인/회원가입" onClick="menuOpen('side-nav-right');return false;"><i class="xi-user"></i><span class="sr-only">로그인/회원가입</span></a>
+		</div>
+		<!-- gnb 
+			[D] 로그인 class=after_login 로 구분
+		-->
+		<nav id="gnb" class="gnb">
+			<ul>
+				<li><h2><a class="font-sp color_rocket" href="index.html"><i class="xi-rocket"></i><span>Rocket</span></a></h2></li>
+				<li class="active"><a href="rocket.html"><i class="xi-satellite"></i><span>로켓기지</span></a></li>
+				<li><a href="recommend.html"><i class="xi-present"></i><span>알림로켓<b class="animated rubberBand">12</b></span></a></li>
+				<li><a href="scrap.html"><i class="xi-tagged-book"></i><span>찜한로켓<b class="animated rubberBand">?</b></span></a></li>
+				<li><a href="mypage_member.html"><i class="xi-flag-triangle"></i><span>탑승로켓<b class="animated rubberBand">8</b></span></a></li>
+			</ul>
+		</nav>
+	</header>
+	<!--// header -->
+
+	<!-- container -->
+	<div id="container">
+
+<!-- content include -->
+<div id="ct">
+
+	<!-- 카테고리 -->
+	<nav class="tab-category">
+		<ul>
+			<li><a class="on" href="">전체</a></li>
+			<li><a href="">학생참여</a></li>
+			<li><a href="">해외탐방</a></li>
+			<li><a href="">공모전</a></li>
+			<li><a href="">봉사활동</a></li>
+		</ul>
+	</nav>
+
+	<!-- 로켓헤더 컨테이너 -->
+	<div class="container-fluid w1200">
+		<!-- 로켓페이지 헤더 -->
+		<div class="rocket-hd card clearfix">
+			<!-- 검색창 -->
+			<div class="rocket-srch">
+				<input type="text" class="btn btn-radius" placeholder="키워드를 입력해주세요">
+				<button type="button" onClick="$('.filter-select').toggleClass('on');"><i class="xi-magnifier"></i><span class="sr-only">검색</span></button>
+			</div>
+			<div class="rocket-srch-add">
+				<button type="button" class="btn btn-filter collapsed" data-toggle="collapse" data-target="#srch-filter-container" aria-expanded="false" title="상세검색"><i class="xi-funnel animated rubberBand"></i><i class="xi-close animated rotateIn"></i><span class="bubble">상세검색</span></button>
+			</div>
+			<!-- 현재 선택한 키워드
+				[D] 키워드가 있으면 class=on	
+			-->
+			<div class="filter-select">
+				<ul>
+					<li class="animated zoomIn"><a class="btn btn-radius" href="#" title="삭제">1일 이내<span class="sr-only">삭제</span><i class="xi-close"></i></a></li>
+					<li class="animated zoomIn"><a class="btn btn-radius" href="#" title="삭제">중규모<span class="sr-only">삭제</span><i class="xi-close"></i></a></li>
+					<li class="animated zoomIn"><a class="btn btn-radius" href="#" title="삭제">대기업<span class="sr-only">삭제</span><i class="xi-close"></i></a></li>
+					<li class="animated zoomIn"><a class="btn btn-radius" href="#" title="삭제">오전<span class="sr-only">삭제</span><i class="xi-close"></i></a></li>
+					<li class="animated zoomIn"><a class="btn btn-radius" href="#" title="삭제">서울권<span class="sr-only">삭제</span><i class="xi-close"></i></a></li>
+					<li class="animated zoomIn"><a class="btn btn-radius" href="#" title="삭제">활동증명<span class="sr-only">삭제</span><i class="xi-close"></i></a></li>
+				</ul>
+				<!--
+				<button type="button" class="btn"><i class="xi-refresh-l"></i><span class="hidden-xs"> 초기화</span></button>
+				-->
+			</div>
+		</div>
+		<!-- 검색필터
+			[D] class=in 을 넣으면 열린상태
+		-->
+		<div id="srch-filter-container" class="collapse card srch-filter-container">
+			<div class="swiper-container">
+				<!-- 페이지네이션 -->
+				<div class="srch-filter-pn"></div>
+				<!-- 학생참여 -->
+				<ul id="srch-filter-2" class="swiper-wrapper srch-filter">
+					<!-- 모집정보(공통) -->
+					<li class="swiper-slide">
+						<h3><i class="xi-paper"></i>모집정보</h3>
+						<ul class="srch-filter-2">
+							<!-- 모집기한 -->
+							<li>
+								<h4>모집기한 <button type="button" class="btn btn-direct btn-xs pull-right" onClick="$(this).parent().next().toggle();"><i class="xi-plus"></i> 직접입력</button></h4>
+								<!-- 데이트레인지 -->
+								<div class="collapse">
+									<div class="input-group daterange-wrp">
+										<input type="text" class="form-control daterange" placeholder="시작일 ~ 종료일">
+										<span class="input-group-btn">
+											<button type="button" class="btn" onClick="$(this).parent().prev().focus();"><i class="xi-calendar-check"></i></button>
+										</span>
+									</div>
+								</div>
+								<div class="buttons clearfix" data-toggle="buttons">
+									<div class="bx-tb">
+										<div>
+											<label class="btn active">
+												<input type="radio" name="radio" checked> 전체
+											</label>
+										</div>
+										<div>
+											<label class="btn">
+												<input type="radio" name="radio"> 3일 이내
+											</label>
+										</div>
+										<div>
+											<label class="btn">
+												<input type="radio" name="radio"> 1주 이내
+											</label>
+										</div>
+										<div>
+											<label class="btn">
+												<input type="radio" name="radio"> 1달 이내
+											</label>
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- 규모 -->
+							<li>
+								<h4>규모 <small>(소규모는 20명 이하 / 대규모는 50명 이상)</small></h4>
+								<div class="buttons clearfix" data-toggle="buttons">
+									<div class="bx-tb">
+										<div>
+											<label class="btn">
+												<input type="checkbox"> 소규모
+											</label>
+										</div>
+										<div>
+											<label class="btn">
+												<input type="checkbox"> 중규모
+											</label>
+										</div>
+										<div>
+											<label class="btn">
+												<input type="checkbox"> 대규모
+											</label>
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- 주최 -->
+							<li>
+								<h4>주최</h4>
+								<div class="buttons buttons-checkbox clearfix" data-toggle="buttons">
+									<div class="bx-tb">
+										<div>
+											<label class="btn">
+												<input type="checkbox"> 대기업
+											</label>
+										</div>
+										<div>
+											<label class="btn">
+												<input type="checkbox"> 공기업
+											</label>
+										</div>
+										<div>
+											<label class="btn">
+												<input type="checkbox"> 국가/기관
+											</label>
+										</div>
+										<div>
+											<label class="btn">
+												<input type="checkbox"> 기타
+											</label>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<!-- 기간 -->
+					<li class="swiper-slide">
+						<h3><i class="xi-calendar"></i>기간</h3>
+						<ul class="srch-filter-2">
+							<!-- 활동기간 -->
+							<li>
+								<h4>활동기간 <button type="button" class="btn btn-direct btn-xs pull-right" onClick="$(this).parent().next().toggle();"><i class="xi-plus"></i> 직접입력</button></h4>
+								<!-- 데이트레인지 -->
+								<div class="collapse">
+									<div class="input-group daterange-wrp">
+										<input type="text" class="form-control daterange" placeholder="시작일 ~ 종료일">
+										<span class="input-group-btn">
+											<button type="button" class="btn" onClick="$(this).parent().prev().focus();"><i class="xi-calendar-check"></i></button>
+										</span>
+									</div>
+								</div>
+								<div class="buttons clearfix" data-toggle="buttons">
+									<div class="bx-tb">
+										<div>
+											<label class="btn active">
+												<input type="radio" name="radio2" checked> 전체
+											</label>
+										</div>
+										<div>
+											<label class="btn">
+												<input type="radio" name="radio2"> 2주 이내
+											</label>
+										</div>
+										<div>
+											<label class="btn">
+												<input type="radio" name="radio2"> 1달 이내
+											</label>
+										</div>
+										<div>
+											<label class="btn">
+												<input type="radio" name="radio2"> 1달 이상
+											</label>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<!-- 지역 -->
+					<li class="swiper-slide">
+						<h3><i class="xi-map-marker"></i>지역</h3>
+						<ul class="srch-filter-2">
+							<li>
+								<h4>활동지역</h4>
+								<div class="buttons buttons-checkbox clearfix" data-toggle="buttons">
+									<div class="bx-tb">
+										<div>
+											<label class="btn">
+												<input type="checkbox"> 유럽
+											</label>
+										</div>
+										<div>
+											<label class="btn">
+												<input type="checkbox"> 미주/중남미
+											</label>
+										</div>
+										<div>
+											<label class="btn">
+												<input type="checkbox"> 남태평양
+											</label>
+										</div>
+									</div>
+									<div class="bx-tb">
+										<div>
+											<label class="btn">
+												<input type="checkbox"> 동남아
+											</label>
+										</div>
+										<div>
+											<label class="btn">
+												<input type="checkbox"> 중국/일본
+											</label>
+										</div>
+										<div>
+											<label class="btn">
+												<input type="checkbox"> 아프리카
+											</label>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<!-- 혜택정보 -->
+					<li class="swiper-slide">
+						<h3><i class="xi-medal"></i>혜택정보</h3>
+						<ul class="srch-filter-2">
+							<!-- 활동혜택 -->
+							<li>
+								<h4>무료/유료</h4>
+								<div class="buttons buttons-checkbox clearfix" data-toggle="buttons">
+									<div class="bx-tb">
+										<div>
+											<label class="btn">
+												<input type="checkbox"> 무료
+											</label>
+										</div>
+										<div>
+											<label class="btn">
+												<input type="checkbox"> 일부지원
+											</label>
+										</div>
+										<div>
+											<label class="btn">
+												<input type="checkbox"> 유료
+											</label>
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- 우수자혜택 -->
+							<li>
+								<h4>우수자혜택</h4>
+								<div class="buttons buttons-checkbox clearfix" data-toggle="buttons">
+									<div class="bx-tb">
+										<div>
+											<label class="btn">
+												<input type="checkbox"> 입사 시 가산점
+											</label>
+										</div>
+										<div>
+											<label class="btn">
+												<input type="checkbox"> 포상여부
+											</label>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+<script>
+jQuery(function($){
+	"use strict";
+	var swiperPn = [];
+	$('#srch-filter-container h3').each(function(){
+		swiperPn.push($(this).html());
+	});
+	var swiper = new Swiper('#srch-filter-container .swiper-container', {
+		slidesPerView:'auto',
+        centeredSlides:true,
+       autoHeight:true,
+		pagination:'#srch-filter-container .srch-filter-pn',
+		paginationClickable: true,
+		paginationElement:'a',
+		bulletClass:'srch-filter-pn-a',
+		bulletActiveClass:'active',
+		paginationBulletRender:function(swiper,index,className){
+			return '<a class="'+className+'" href="#">'+swiperPn[index]+'</a>';
+		}
+	});
+	// 스와이프 리프레쉬
+	$('button.btn-direct').click(function(){
+		swiper.update();
+	});
+	$('button.btn-filter').click(function(event){
+		setTimeout(function(){
+			swiper.update();
+			swiper.slideTo(0);
+			$(this).off(event);
+		},0);
+	});
+});
+</script>
+		<!--// 검색필터 -->
+	</div>
+	<!--// 로켓헤더 컨테이너 -->
+
+</div>
+<!--// content include -->
+
+	</div>
+	<!--// container -->
+
+	<!-- footer -->
+	<footer id="ft">
+		<div class="container-fluid w1200">
+			<h2 class="font-sp color-red"><i class="xi-rocket"></i> <strong>ROCKET</strong></h2>
+			<div class="ft-sns">
+				<a href="" target="_blank" title="페이스북"><i class="xi-facebook"></i><span class="sr-only">페이스북</span></a>
+				<a href="" target="_blank" title="카카오스토리"><i class="xi-kakaostory"></i><span class="sr-only">카카오스토리</span></a>
+			</div>
+			<div class="ft-policy">
+				<ul class="ft-mn list-inline">
+					<li><a href="info_about.html">서비스 소개</a></li>
+					<li><a href="info_terms.html">이용약관</a></li>
+					<li><a href="info_privacy.html">개인정보취급방침</a></li>
+					<li><a href="info_faq.html">고객센터</a></li>
+					<li><a href="info_collaboration.html">제휴문의</a></li>
+				</ul>
+				<address>COPYRIGHT &copy; ROCKET. All RIGHTS RESERVED</address>
+			</div>
+		</div>
+		<a id="goTop" href="#wrap"><i class="xi2-caret-up-circle"></i><span class="sr-only">위로</span></a>
+	</footer>
+	<!--// footer -->
+
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<!-- lib -->
+<script src="assets/libs/Swiper/js/swiper.jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<!-- common -->
+<script src="assets/js/common.js"></script>
+<!--
+<script src="assets/js/sidebar.js"></script>
+-->
+</body>
+</html>
