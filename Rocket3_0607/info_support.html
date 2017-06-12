@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Rocket</title>
+
+<!-- css -->
+<link rel="stylesheet" href="assets/css/import.css">
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<header id="hd" class="hd-fixed">
+		<h1 class="ellipsis hidden-lg hidden-md animated lightSpeedIn ani-duration15">ROCKET</h1>
+		<!-- 좌측 -->
+		<div id="hdLt" class="hd-icon-wrp-lt animated fadeInLeft">
+			<!-- 검색/맞춤 버튼 : 메인과 알림로켓에서만 검색 아이콘 xi-bell xi-magnifier -->
+			<a class="hd-icon" href="" aria-expanded="false" aria-controls="searchTitle" title="검색 더보기" onClick="menuOpen('side-nav-left');return false;"><i class="xi-magnifier"></i><span class="sr-only">검색 더보기</span></a>
+		</div>
+		<!-- 아이로켓 : 오늘 본 페이지-->
+		<div id="I-Rocket" class="login-gate animated rollIn">
+			<div>
+				<a href="" data-toggle="modal" data-target="#todayViewed"><span class="sr-only">오늘 본 페이지</span></a>
+			</div>
+		</div>
+		<!-- 우측 -->
+		<div id="hdRt" class="hd-icon-wrp-rt animated fadeInRight">
+			<a class="hd-icon" href="guide.html" title="사용매뉴얼"><i class="xi-paper"></i><span class="sr-only">사용매뉴얼</span></a>
+			<a class="hd-icon" href="" title="로그인/회원가입" onClick="menuOpen('side-nav-right');return false;"><i class="xi-user"></i><span class="sr-only">로그인/회원가입</span></a>
+		</div>
+		<!-- gnb 
+			[D]  로그인 class=after_login 로 구분
+		-->
+		<nav id="gnb" class="gnb">
+			<ul>
+				<li><h2><a class="font-sp color_rocket" href="index.html"><i class="xi-rocket"></i><span>Rocket</span></a></h2></li>
+				<li class="active"><a href="rocket.html"><i class="xi-satellite"></i><span>로켓기지</span></a></li>
+				<li><a href="recommend.html"><i class="xi-present"></i><span>알림로켓<b class="animated rubberBand">12</b></span></a></li>
+				<li><a href="scrap.html"><i class="xi-tagged-book"></i><span>찜한로켓<b class="animated rubberBand">?</b></span></a></li>
+				<li><a href="mypage_member.html"><i class="xi-flag-triangle"></i><span>탑승로켓<b class="animated rubberBand">8</b></span></a></li>
+			</ul>
+		</nav>
+	</header>
+	<!--// header -->
+
+	<!-- container : infopage -->
+	<div id="container" class="container-mypage container-infopage">
+
+<!-- mypage include -->
+
+<div id="mypage" class="page-mypage page-sub">
+	<!-- 상단고정 -->
+	<section class="sub-top">
+		<div class="w1200 clearfix">
+			<h1 class="font-ns">ROCKET</h1>
+			<!-- 빵조각메뉴 -->
+			<ol class="breadcrumb">
+				<li><a href="index.html">ROCKET</a></li>
+				<li><a href="info_faq.html">고객센터</a></li>
+				<li>문의/신고하기</li>
+			</ol>
+			<div class="visible-xs-block visible-sm-block">
+				<!-- 좌측 : 뒤로가기 등 -->
+				<div class="hd-icon-wrp-lt">
+					<a class="nav-close animated fadeInLeft" href=""><span class="sr-only">뒤로가기</span><i class="xi-angle-left"></i></a>
+				</div>
+				<!-- 메뉴열기 -->
+				<a class="tg-nav-sidebar" href="#sidebar"><span class="sr-only">사이드 메뉴</span><i class="xi2-ellipsis-h"></i></a>
+			</div>
+		</div>
+	</section>
+	<div class="w1200 clearfix">
+		<!-- 좌측 -->
+		<nav id="sidebar" class="page-sidebar">
+			<div class="sidebar-hd profile-bx">
+				<a class="profile-wrp" href="about.html">
+					<span class="img-circle color-red"><i class="xi-rocket animated tada"></i></span>
+				</a>
+				<h4 class="font-sp color-red"><i class="xi-rocket"></i> ROCKET</h4>
+				<p class="memo">안녕하세요:) <br>대학생의 멘토! 로켓입니다! <br><br>contact@myrocket.com</p>
+				<!-- 해당 sns 정보가 있는 경우에만 .off 제거 -->
+				<ul class="profile-sns clearfix">
+					<li><a class="bg-naver" href="#" target="_blank"><i class="xi-naver"></i> <strong class="sr-only">네이버</strong></a></li>
+					<li><a class="bg-fb" href="#" target="_blank"><i class="xi-facebook"></i> <strong class="sr-only">페이스북</strong></a></li>
+					<li><a class="bg-kakao" href="#" target="_blank"><i class="xi2-kakao"></i> <strong class="sr-only">카카오스토리</strong></a></li>
+					<li><a class="bg-google" href="#" target="_blank"><i class="xi2-google"></i> <strong class="sr-only">구글</strong></a></li>
+				</ul>
+			</div>
+			<ul class="nav-sidebar">
+				<li>
+					<a href="info_about.html">서비스 소개</a>
+				</li>
+				<li>
+					<a href="info_terms.html">이용약관</a>
+				</li>
+				<li>
+					<a href="info_info_privacy.html">개인정보취급방침</a>
+				</li>
+				<li class="active">
+					<a href="info_faq.html">고객센터</a>
+					<ul class="nav nav2">
+						<li><a href="info_faq.html">FAQ</a></li>
+						<li><a href="info_notice.html">공지사항</a></li>
+						<li class="active"><a href="info_support.html">문의/신고하기</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="info_collaboration.html">제휴문의</a>
+				</li>
+			</ul>
+		</nav>
+		<!--// 좌측 -->
+		<!-- 우측 -->
+		<div class="page-content">
+			<!-- 글쓰기 -->
+			<form class="card3 form-horizontal">
+				<header class="card-hd">
+					<h2 class="h2">
+						문의/신고하기
+						<br>
+						<small>서비스 이용, 권리침해신고, 오류신고 등을 문의/신고하실 수 있습니다</small>
+					</h2>
+				</header>
+				<div class="form-group">
+					<label for="" class="col-xs-3 control-label">분류</label>
+					<div class="col-xs-9">
+						<select class="form-control">
+							<option>서비스 이용</option>
+							<option>권리침해신고</option>
+							<option>오류신고</option>
+							<option>기타</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-3 control-label">이름</label>
+					<div class="col-xs-9">
+						<input type="text" class="form-control" id="" placeholder="" value="홍길동">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-3 control-label">이메일</label>
+					<div class="col-xs-9">
+						<input type="email" class="form-control" id="" placeholder="" value="hong@naver.com">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-3 control-label">연락처</label>
+					<div class="col-xs-9">
+						<input type="text" class="form-control" id="" placeholder="">
+					</div>
+				</div>
+				<!-- [D] 모바일 지원이 되는 에디터를 삽입하는 방법이 더 좋을 듯 -->
+				<div class="form-group">
+					<label for="" class="col-xs-3 control-label">내용</label>
+					<div class="col-sm-9 col-xs-12">
+						<textarea class="form-control" rows="10" id="" placeholder=""></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-xs-3 control-label">첨부파일</label>
+					<div class="col-xs-9">
+						<input type="file" class="form-control" id="">
+					</div>
+				</div>
+				<!-- 하단고정메뉴 -->
+				<div class="container-fluid">
+					<div class="btnarea">
+						<div>
+							<button type="button" class="btn btn-block btn-lg">취소하기</button>
+						</div>
+						<div>
+							<button type="submit" class="btn btn-primary btn-block btn-lg">전송하기</button>
+						</div>
+					</div>
+				</div>
+			</form>
+			<!--// 글쓰기 -->
+		</div>
+	</div>
+</div>
+<!--// mypage include -->
+
+	</div>
+	<!--// container -->
+
+	<!-- footer -->
+	<footer id="ft">
+		<div class="container-fluid w1200">
+			<h2 class="font-sp color-red"><i class="xi-rocket"></i> <strong>ROCKET</strong></h2>
+			<div class="ft-sns">
+				<a href="" target="_blank" title="페이스북"><i class="xi-facebook"></i><span class="sr-only">페이스북</span></a>
+				<a href="" target="_blank" title="카카오스토리"><i class="xi-kakaostory"></i><span class="sr-only">카카오스토리</span></a>
+			</div>
+			<div class="ft-policy">
+				<ul class="ft-mn list-inline">
+					<li><a href="info_about.html">서비스 소개</a></li>
+					<li><a href="info_terms.html">이용약관</a></li>
+					<li><a href="info_privacy.html">개인정보취급방침</a></li>
+					<li><a href="info_faq.html">고객센터</a></li>
+					<li><a href="info_collaboration.html">제휴문의</a></li>
+				</ul>
+				<address>COPYRIGHT &copy; ROCKET. All RIGHTS RESERVED</address>
+			</div>
+		</div>
+		<a id="goTop" href="#wrap"><i class="xi2-caret-up-circle"></i><span class="sr-only">위로</span></a>
+	</footer>
+	<!--// footer -->
+
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<!-- lib -->
+<script src="assets/libs/Swiper/js/swiper.jquery.min.js"></script>
+<script src="assets/libs/moment.min.js"></script>
+<script src="assets/libs/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<!-- common -->
+<script src="assets/js/common.js"></script>
+
+</body>
+</html>

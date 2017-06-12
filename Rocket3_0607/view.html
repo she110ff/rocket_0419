@@ -1,0 +1,1449 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Rocket</title>
+
+<!-- css -->
+<link rel="stylesheet" href="assets/css/import.css">
+<!-- js -->		
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<header id="hd" class="hd-fixed">
+		<h1 class="ellipsis hidden-lg hidden-md animated lightSpeedIn ani-duration15">ROCKET</h1>
+		<!-- 좌측 -->
+		<div id="hdLt" class="hd-icon-wrp-lt animated fadeInLeft">
+			<!-- 검색/맞춤 버튼 : 메인과 알림로켓에서만 검색 아이콘 xi-bell xi-magnifier -->
+			<a class="hd-icon" href="" aria-expanded="false" aria-controls="searchTitle" title="검색 더보기" onClick="menuOpen('side-nav-left');return false;"><i class="xi-magnifier"></i><span class="sr-only">검색 더보기</span></a>
+		</div>
+		<!-- 아이로켓 : 오늘 본 페이지-->
+		<div id="I-Rocket" class="login-gate animated rollIn">
+			<div>
+				<a href="" data-toggle="modal" data-target="#todayViewed"><span class="sr-only">오늘 본 페이지</span></a>
+			</div>
+		</div>
+		<!-- 우측 -->
+		<div id="hdRt" class="hd-icon-wrp-rt animated fadeInRight">
+			<a class="hd-icon" href="guide.html" title="사용매뉴얼"><i class="xi-paper"></i><span class="sr-only">사용매뉴얼</span></a>
+			<a class="hd-icon" href="" title="로그인/회원가입" onClick="menuOpen('side-nav-right');return false;"><i class="xi-user"></i><span class="sr-only">로그인/회원가입</span></a>
+		</div>
+		<!-- gnb 
+			[D]  로그인 class=after_login 로 구분
+		-->
+		<nav id="gnb" class="gnb">
+			<ul>
+				<li><h2><a class="font-sp color_rocket" href="index.html"><i class="xi-rocket"></i><span>Rocket</span></a></h2></li>
+				<li class="active"><a href="rocket.html"><i class="xi-satellite"></i><span>로켓기지</span></a></li>
+				<li><a href="recommend.html"><i class="xi-present"></i><span>알림로켓<b class="animated rubberBand">12</b></span></a></li>
+				<li><a href="scrap.html"><i class="xi-tagged-book"></i><span>찜한로켓<b class="animated rubberBand">?</b></span></a></li>
+				<li><a href="mypage_member.html"><i class="xi-flag-triangle"></i><span>탑승로켓<b class="animated rubberBand">8</b></span></a></li>
+			</ul>
+		</nav>
+	</header>
+	<!--// header -->
+
+	<!-- container -->
+	<div id="container">
+
+	<div class="w1200 clearfix">
+
+<!-- view -->
+<div id="view" class="view">
+	<!-- nav -->
+	<div class="view-top hd-fixed">
+		<h1 class="font-sp ellipsis">로켓 상세</h1>
+		<!-- 좌측 -->
+		<div class="hd-icon-wrp-lt visible-xs-block">
+			<a class="nav-close animated fadeInLeft" href="#snb" onClick="viewClose();return false;"><span class="sr-only">닫기</span><i class="xi-angle-left"></i></a>
+		</div>
+		<!-- 우측 -->
+		<div class="hd-icon-wrp-rt hd-icon-wrp">
+			<!-- [D] 
+				지원서 : #apply
+				이메일 지원서 : #applyMail
+				지원종료 후 disabled
+				<a class="btn btn-primary btn-block" href="#apply" data-toggle="modal" data-target="#apply"><span class="animated flash"><i class="xi-rocket"></i>지원하기</span></a>
+			-->
+			<a class="hd-icon animated bounceIn" href="#apply" data-toggle="modal" data-target="#apply" title="지원하기"><span class="sr-only">지원하기</span><i class="xi-rocket"></i></a>
+			<a class="hd-icon" href="#" onclick="$(this).toggleClass('animated jello').find('i').toggleClass('xi2-heart-o xi2-heart');return false;" title="찜하기"><span class="sr-only">찜하기</span><i class="xi2-heart-o"></i></a>
+			<a class="hd-icon" href="" data-toggle="modal" data-target="#sns" title="공유하기"><span class="sr-only">공유하기</span><i class="xi-share-alt"></i></a>
+		</div>
+	</div>
+	<article class="view-article">
+		<!-- 포스터 -->
+		<div class="view-poster card3">
+			<img class="img-responsive center-block" src="http://drawround.com/wp/wp-content/uploads/2014/06/poster.jpg" alt="포스터">
+			<!-- xi-expand-square -->
+			<a class="btn-expand" href="http://drawround.com/wp/wp-content/uploads/2014/06/poster.jpg" target="_blank" title="확대보기"><i class="xi-magnifier-expand"></i><span class="sr-only">확대보기</span></a>
+		</div>
+		<!-- 상세 헤더 -->
+		<header class="view-hd">
+			<div>
+				<section class="view-tl card">
+					<h2>
+						<span class="corp">[삼성전자]</span>
+						SLP 삼성 글로벌 리더쉽 프로그램 13기 모집합니다.
+					</h2>
+					<b class="d-day font-sp animated rotateInDownRight"><span class="sr-only">날짜 </span>D-16</b>
+					<div class="summary">
+						삼성전자를 사랑하는 대학생이라면!<br>
+						수료자 전원에게는 공식 수료증 발급을 합니다.
+					</div>
+					<div class="meta">
+						<span title="기간"><i class="xi-time"></i><span class="sr-only">기간</span> <b>5시간 전</b></span>
+						<!--
+						<span title="조회수"><i class="xi-eye"></i><span class="sr-only">조회수</span><b>10</b></span>
+						<span title="찜한수"><i class="xi2-heart-o"></i><span class="sr-only">찜한수</span><b>8</b></span>
+						-->
+					</div>
+					<div class="quick-keyword bg-silver">
+						<ul>
+							<!-- 정보: [D] 찜한 경우 <i class=xi-check></i> -->
+							<li><a class="quick-heart font-sp" href="#" onclick="$(this).toggleClass('animated jello').find('i').toggleClass('xi2-heart-o xi2-heart');return false;"><i class="xi2-heart-o"></i><span><span class="sr-only">찜한수 </span><b>197</b></span></a></li>
+							<li><a class="quick-view font-sp" href="#"><i class="xi-users"></i><span><span class="sr-only">지원자수 </span><b>2,324</b></span></a></li>
+							<!-- 퀵 키워드 -->
+							<li><a href=""><i class="xi-chart-pyramid"></i><span>대기업</span></a></li>
+							<li><a href=""><i class="xi-bank"></i><span>국가/기관</span></a></li>
+							<li><a href=""><i class="xi-movie"></i><span>문화/예술</span></a></li>
+							<li><a href=""><i class="xi-tent"></i><span>체험/경험</span></a></li>
+							<!--
+							<li><a href=""><i class="xi-shoes"></i><span>뷰티</span></a></li>
+							<li><a href=""><i class="xi-color"></i><span>디자인</span></a></li>
+							<li><a href=""><i class="xi-network"></i><span>인맥</span></a></li>
+							<li><a href=""><i class="xi-share-alt"></i><span>블로그/SNS</span></a></li>
+							<li><a href=""><i class="xi-cine-camera"></i><span>기자단</span></a></li>
+							<li><a href=""><i class="xi-family"></i><span>팀활동</span></a></li>
+							<li><a href=""><i class="xi-flight"></i><span>해외/관광</span></a></li>
+							<li><a href=""><i class="xi-money"></i><span>상금/상품</span></a></li>
+							-->
+						</ul>
+					</div>
+				</section>
+				<div class="apply-wrp">
+					<a class="btn bg-red skew" href="#apply" data-toggle="modal" data-target="#apply"><span><span class="animated flash"><i class="xi-rocket mr4"></i> 지원하기</span></span></a>
+				</div>
+			</div>
+		</header>
+		<!-- 뷰 탭 -->
+		<nav id="viewNav" class="view-nav">
+			 <ul class="nav" role="tablist">
+				<li class="active"><a href="" data-target="#view">로켓설명</a></li>
+				<li><a href="" data-target="#viewSrch">활동검색</a></li>
+				<li><a href="" data-target="#viewCommunity">커뮤니티<small class="count">(6)</small></a></li>
+				<li><a href="" data-target="#viewRelated">관련로켓</a></li>
+			</ul>
+		</nav>
+		<!-- 로켓설명 -->
+		<div id="viewDesc" class="view-desc card3">
+			<h2 class="sr-only">로켓설명</h2>
+			<!-- 날짜 : 해당단계에 class=active -->
+			<section class="view-date">
+				<h3 class="sr-only">모집기간</h3>
+				<ol class="period font-sp">
+					<li>
+						<dl>
+							<dt>모집</dt>
+							<dd>5.17~5.24</dd>
+						</dl>
+					</li>
+					<li class="active">
+						<dl>
+							<dt>서류</dt>
+							<dd>5.17~5.24</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>면접</dt>
+							<dd>5.17~5.24</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>최종</dt>
+							<dd>6.20</dd>
+						</dl>
+					</li>
+				</ol>
+			</section>
+			<section>
+				<h3 class="h3">모집정보</h3>
+				<dl class="dl-horizontal">
+					<dt>모집인원</dt>
+					<dd>30명</dd>
+					<dt>모집대상</dt>
+					<dd>대학생</dd>
+					<dt>팀/개인</dt>
+					<dd>4인 1조</dd>
+					<!-- 학생참여 -->
+					<dt>모집지역</dt>
+					<dd>서울권</dd>
+					<dt>우대사항</dt>
+					<dd>농기계 2급 소유자</dd>
+					<!-- 해외탐방 -->
+					<dt>우대사항</dt>
+					<dd>농기계 2급 소유자</dd>
+					<dt>무료/유료</dt>
+					<dd>일부지원(항공권, 숙식)</dd>
+					<!-- 공모전 -->
+					<dt>모집분야</dt>
+					<dd>광고/마케팅</dd>
+					<dt>결과물제출</dt>
+					<dd>포토샵 시안 제출</dd>
+					<!-- 봉사활동 -->
+					<dt>모집분야</dt>
+					<dd>문화/행사</dd>
+					<dt>홈페이지</dt>
+					<dd><a class="ellipsis" href="http://www.naver.com/" target="_blank">http://www.naver.com/</a></dd>
+				</dl>
+			</section>
+			<section>
+				<h3 class="h3">활동정보</h3>
+				<dl class="dl-horizontal">
+					<dt>활동기간</dt>
+					<dd>3개월</dd>
+					<!-- 학생참여 -->
+					<dt>모임지역</dt>
+					<dd>서울시 서초구 교대역 부근</dd>
+					<dt>모임주기</dt>
+					<dd>매주 월요일 오후</dd>
+					<dt>성격</dt>
+					<dd><strong class="color-red">오프라인 중심</strong></dd>
+					<!-- 해외탐방 -->
+					<dt>출발일정</dt>
+					<dd>6월~8월</dd>
+					<dt>활동지역</dt>
+					<dd>아프리카</dd>
+					<!-- 봉사활동 -->
+					<dt>활동지역</dt>
+					<dd>서울시 서초구 반포 한강변</dd>
+				</dl>
+			</section>
+			<section>
+				<h3 class="h3">혜택정보</h3>
+				<dl class="dl-horizontal">
+					<!-- 학생참여 -->
+					<dt>혜택</dt>
+					<dd>활동증명, 봉사인정</dd>
+					<dt>우수자</dt>
+					<dd><strong class="color-red">입사 시 가산점, 포상</strong></dd>
+					<!-- 공모전 -->
+					<dt>총상금</dt>
+					<dd>5000만원</dd>
+					<dt>1등</dt>
+					<dd>행정자치부 장관상</dd>
+					<!-- 봉사활동 -->
+					<dt>혜택</dt>
+					<dd>인증서, 확인서, 활동비</dd>
+				</dl>
+			</section>
+		</div>
+		<!-- 활동검색 -->
+		<div id="viewSrch" class="view-srch card3">
+			<h2 class="h2">지난활동검색 <a class="pull-right" href="">더보기 <i class="xi-angle-right"></i></a></h2>
+			<ul class="bx-tb tab">
+				<li class="active"><a href="" role="tab" data-toggle="tab" data-target="#srchNaver">네이버 검색<small class="count">(673)</small></a></li>
+				<li><a href="" role="tab" data-toggle="tab" data-target="#srchGoogle">구글 검색<small class="count">(2,673)</small></a></li>
+			</ul>
+			<div class="tab-content">
+				<!-- naver -->
+				<section id="srchNaver" class="tab-pane active">
+					<h3 class="sr-only">네이버 검색 결과</h3>
+					<ul class="media-list srch-lst">
+						<li class="media">
+							<a class="media-body" href="" target="_blank">
+								<h4 class="media-heading ellipsis">2015 지식재산보호 홍보지원단 모집(~3/27)</h4>
+								<div class="cnt">
+									제목, 2015 지식재산보호 홍보지원단 모집(~3/27). 작성자, kipra, 작성일, 2015/03/16, 조회수, 1183. 상세내용. 소재지 : 서울시 강남구 테헤란로 131 ...
+								</div>
+							</a>
+						</li>
+						<li class="media">
+							<a class="media-body" href="" target="_blank">
+								<h4 class="media-heading ellipsis">2015 지식재산보호 홍보지원단 모집(~3/27)</h4>
+								<div class="cnt">
+									제목, 2015 지식재산보호 홍보지원단 모집(~3/27). 작성자, kipra, 작성일, 2015/03/16, 조회수, 1183. 상세내용. 소재지 : 서울시 강남구 테헤란로 131 ...
+								</div>
+							</a>
+						</li>
+						<li class="media">
+							<a class="media-body" href="" target="_blank">
+								<h4 class="media-heading ellipsis">2015 지식재산보호 홍보지원단 모집(~3/27)</h4>
+								<div class="cnt">
+									제목, 2015 지식재산보호 홍보지원단 모집(~3/27). 작성자, kipra, 작성일, 2015/03/16, 조회수, 1183. 상세내용. 소재지 : 서울시 강남구 테헤란로 131 ...
+								</div>
+							</a>
+						</li>
+						<li class="media">
+							<a class="media-body" href="" target="_blank">
+								<h4 class="media-heading ellipsis">2015 지식재산보호 홍보지원단 모집(~3/27)</h4>
+								<div class="cnt">
+									제목, 2015 지식재산보호 홍보지원단 모집(~3/27). 작성자, kipra, 작성일, 2015/03/16, 조회수, 1183. 상세내용. 소재지 : 서울시 강남구 테헤란로 131 ...
+								</div>
+							</a>
+						</li>
+						<li class="media">
+							<a class="media-body" href="" target="_blank">
+								<h4 class="media-heading ellipsis">2015 지식재산보호 홍보지원단 모집(~3/27)</h4>
+								<div class="cnt">
+									제목, 2015 지식재산보호 홍보지원단 모집(~3/27). 작성자, kipra, 작성일, 2015/03/16, 조회수, 1183. 상세내용. 소재지 : 서울시 강남구 테헤란로 131 ...
+								</div>
+							</a>
+						</li>
+					</ul>
+					<!-- [D] 모바일에서는 새창으로 -->
+					<div class="btn-more-wrp">
+						<a class="btn btn-more v2" href="#">검색 더보기 <i class="xi-plus"></i></a>
+						<!--
+						<a class="btn btn-more v2" href="view_search.html" target="_blank">더보기 <i class="xi-plus"></i></a>
+						-->
+					</div>
+				</section>
+				<!-- google -->
+				<section id="srchGoogle" class="tab-pane">
+					<h3 class="sr-only">구글 검색 결과</h3>
+					<ul class="media-list srch-lst">
+						<li class="media">
+							<a class="media-body" href="" target="_blank">
+								<h4 class="media-heading ellipsis">구글검색(~3/27)</h4>
+								<div class="cnt">
+									제목, 2015 지식재산보호 홍보지원단 모집(~3/27). 작성자, kipra, 작성일, 2015/03/16, 조회수, 1183. 상세내용. 소재지 : 서울시 강남구 테헤란로 131 ...
+								</div>
+							</a>
+						</li>
+						<li class="media">
+							<a class="media-body" href="" target="_blank">
+								<h4 class="media-heading ellipsis">2015 지식재산보호 홍보지원단 모집(~3/27)</h4>
+								<div class="cnt">
+									제목, 2015 지식재산보호 홍보지원단 모집(~3/27). 작성자, kipra, 작성일, 2015/03/16, 조회수, 1183. 상세내용. 소재지 : 서울시 강남구 테헤란로 131 ...
+								</div>
+							</a>
+						</li>
+						<li class="media">
+							<a class="media-body" href="" target="_blank">
+								<h4 class="media-heading ellipsis">2015 지식재산보호 홍보지원단 모집(~3/27)</h4>
+								<div class="cnt">
+									제목, 2015 지식재산보호 홍보지원단 모집(~3/27). 작성자, kipra, 작성일, 2015/03/16, 조회수, 1183. 상세내용. 소재지 : 서울시 강남구 테헤란로 131 ...
+								</div>
+							</a>
+						</li>
+						<li class="media">
+							<a class="media-body" href="" target="_blank">
+								<h4 class="media-heading ellipsis">2015 지식재산보호 홍보지원단 모집(~3/27)</h4>
+								<div class="cnt">
+									제목, 2015 지식재산보호 홍보지원단 모집(~3/27). 작성자, kipra, 작성일, 2015/03/16, 조회수, 1183. 상세내용. 소재지 : 서울시 강남구 테헤란로 131 ...
+								</div>
+							</a>
+						</li>
+						<li class="media">
+							<a class="media-body" href="" target="_blank">
+								<h4 class="media-heading ellipsis">2015 지식재산보호 홍보지원단 모집(~3/27)</h4>
+								<div class="cnt">
+									제목, 2015 지식재산보호 홍보지원단 모집(~3/27). 작성자, kipra, 작성일, 2015/03/16, 조회수, 1183. 상세내용. 소재지 : 서울시 강남구 테헤란로 131 ...
+								</div>
+							</a>
+						</li>
+					</ul>
+					<!-- [D] 모바일에서는 새창으로 -->
+					<div class="btn-more-wrp">
+						<a class="btn btn-more v2" href="#">검색 더보기 <i class="xi-plus"></i></a>
+						<!--
+						<a class="btn btn-more v2" href="view_search.html" target="_blank">더보기 <i class="xi-plus"></i></a>
+						-->
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- 커뮤니티 
+			[D] 추후 1) 리뷰 2) 댓글로 분리되야 함
+		-->
+		<div id="viewCommunity" class="card3">
+			<h2 class="sr-only">커뮤니티</h2>
+			<!-- 현 버전에서 지원자 보기(X) : 당분간 조회자 통계(O) -->
+			<section id="viewApplicant" class="applicant-wrp">
+				<h3 class="h3">이 로켓을 <span class="color-red">누가</span> 봤을까요?</h3>
+				<div>
+					<!-- 통계 -->
+					<div class="statics">
+						<div>
+							<figure class="knob">
+								<input type="text" class="dial" data-min="0" data-max="100" data-thickness=".1" value="55" data-readOnly="true" data-width="100" data-height="100" data-bgColor="#DDDDDD" data-fgColor="#E53934">
+								<figcaption>여자</figcaption>
+							</figure>
+						</div>
+						<div>
+							<i class="xi-toilet"></i>
+						</div>
+						<div>
+							<figure class="knob">
+								<input type="text" class="dial" data-min="0" data-max="100" data-thickness=".1" value="45" data-readOnly="true" data-width="100" data-height="100" data-bgColor="#DDDDDD" data-fgColor="#232f4a">
+								<figcaption>남자</figcaption>
+							</figure>
+						</div>
+					</div>
+					<!-- [D] 지원자 정보 : 프라이버시 문제로 본사람 정보는 노출X
+					<div class="people_det">
+						<ul class="applicant_lst row clearfix">
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/female.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/male.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/female.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/female.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/male.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/male.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/male.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/male.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/female.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/female.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+							<li>
+								<a href="mypage_rocket.html" target="_blank" title="이름"><img class="img-responsive" src="assets/img/male.png" alt=""><span class="sr-only">이름</span></a>
+							</li>
+						</ul>
+					</div>
+					-->
+				</div>
+			</section>
+			<!-- 댓글 -->
+			<section id="viewCmt" class="view-cmt">
+				<h3 class="h3">댓글 <span class="cmt-count font-sp color-red">168</span> <a class="pull-right" href="view_comment.html">댓글 전체보기 <i class="xi-angle-right"></i></a></h3>
+				<form class="media frm-wrt">
+					<div class="media-body">
+						<textarea class="form-control" placeholder="댓글을 입력해주세요"></textarea>
+						<div class="cmt-upload">
+							<button type="button" class="no-style" title="사진 업로드"><i class="xi2-camera"></i><span class="sr-only">사진 업로드</span></button>
+							<button type="button" class="no-style" title="파일 업로드"><i class="xi2-attachment"></i><span class="sr-only">파일 업로드</span></button>
+						</div>
+						<!-- 업로드한 파일 프리뷰 -->
+						<ul class="cmt-upload-lst list-inline">
+							<li><a href="#" title="삭제" onClick="confirm('삭제하시겠습니까?');return false;"><img class="img-responsive center-block" src="https://cdn.pixabay.com/photo/2012/11/28/10/34/rocket-launch-67643_960_720.jpg" alt=""></a></li>
+							<li><a href="#" title="삭제" onClick="confirm('삭제하시겠습니까?');return false;"><img class="img-responsive center-block" src="https://cdn.pixabay.com/photo/2012/11/28/10/34/rocket-launch-67643_960_720.jpg" alt=""></a></li>
+							<li><a href="#" title="삭제" onClick="confirm('삭제하시겠습니까?');return false;"><span>로켓가이드_설명서.doc</span></a></li>
+						</ul>
+					</div>
+					<div class="media-right">
+						<button type="button" class="btn bg-navy">등록</button>
+					</div>
+				</form>
+				<div class="cmt-sort">
+					<a class="active" href="#"><i class="xi-check"></i> 최신순</a> <span></span> <a href="#"><i class="xi-check"></i> 좋아요순</a>
+				</div>
+				<ul class="lst-cmt" aria-live="polite">
+					<!-- 이 로켓의 권한자 class=cmt-master -->
+					<li class="cmt-master">
+						<div class="cmt-hd clearfix">
+							<div class="pull-left">
+								<a class="name" href="">
+									<img class="img-circle" src="assets/img/female.png" alt=""> 마스터
+								</a>
+								<small class="date font-sp">40분 전</small>
+							</div>
+							<div class="pull-right react dropdown">
+								<button type="button" class="no-style dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="xi-ellipsis-v"></i><span class="sr-only">더보기</span></button>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="" data-toggle="modal" data-target="#report"><i class="xi-lock"></i> <span>신고</span></a></li>
+									<!-- 권한자 -->
+									<li><a href="" onClick="confirm('삭제하시겠습니까?');return false;"><i class="xi-trash"></i> <span>삭제</span></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="cnt">
+							<!-- [D] 대댓글이 있으나 삭제된 경우 -->
+							<p class="text-center color-grey">삭제된 댓글입니다.</p>
+						</div>
+						<div class="cmt-ft react clearfix">
+							<div class="pull-left">
+							</div>
+							<div class="pull-right">
+								<!-- [D] 좋아요 누르면 i에 class="xi2-heart" -->
+								<button type="button" class="no-style color-red" onclick="$(this).toggleClass('animated jello').find('i').toggleClass('xi2-heart-o xi2-heart');return false;" title="좋아요"><i class="xi2-heart-o"></i><span class="sr-only">좋아요</span> 14</button>
+								<button type="button" class="no-style" onClick="$(this).parents('.cmt-ft').next().toggle();"><i class="xi2-message-o"></i><span class="sr-only">대댓글</span> 12</button>
+							</div>
+						</div>
+						<!-- 대댓글 -->
+						<div class="lst-cmt-re" style="display:block">
+							<ul class="lst-cmt">
+								<li>
+									<div class="cmt-hd clearfix">
+										<div class="pull-left">
+											<a class="name" href="">
+												<img class="img-circle" src="assets/img/female.png" alt=""> 홍길동
+											</a>
+											<small class="date font-sp">2016.08.18 21:34</small>
+										</div>
+										<div class="pull-right react dropdown">
+											<button type="button" class="no-style dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="xi-ellipsis-v"></i><span class="sr-only">더보기</span></button>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li><a href="" data-toggle="modal" data-target="#report"><i class="xi-lock"></i> <span>신고</span></a></li>
+												<!-- 권한자 -->
+												<li><a href="" onClick="confirm('삭제하시겠습니까?');return false;"><i class="xi-trash"></i> <span>삭제</span></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="cnt">
+										안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요. 안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요.
+										<!-- [D] 이미지업로드 된 경우 자동출력 -->
+										<ul class="lst-uplaod-img">
+											<li><a href="#"><img class="img-responsive center-block" src="http://media.istockphoto.com/vectors/rocket-messaging-vector-id124990059" alt=""></a></li>
+										</ul>
+										<!-- [D] 파일업로드 된 경우 자동출력 -->
+										<ul class="lst-uplaod-img lst-uplaod-file">
+											<li><a href="">로켓에 대한 보고서.doc</a></li>
+											<li><a href="">로켓에 대한 보고서.doc</a></li>
+										</ul>
+									</div>
+									<div class="cmt-ft react clearfix">
+										<div class="pull-left">
+										</div>
+										<div class="pull-right">
+											<button type="button" class="no-style color-red" onclick="$(this).toggleClass('animated jello').find('i').toggleClass('xi2-heart-o xi2-heart');return false;" title="좋아요"><i class="xi2-heart-o"></i><span class="sr-only">좋아요</span> 14</button>
+											<button type="button" class="no-style" onClick="$(this).parents('.cmt-ft').next().toggle();"><i class="xi2-message-o"></i><span class="sr-only">대댓글</span> 12</button>
+										</div>
+									</div>
+									<!-- 대대댓글 쓰기 -->
+									<div class="lst-cmt-re" style="display:block">
+										<form class="media frm-wrt">
+											<div class="media-body">
+												<textarea class="form-control" placeholder="대댓글을 입력해주세요"></textarea>
+												<div class="cmt-upload">
+													<button type="button" class="no-style" title="사진 업로드"><i class="xi2-camera"></i><span class="sr-only">사진 업로드</span></button>
+													<button type="button" class="no-style" title="파일 업로드"><i class="xi2-attachment"></i><span class="sr-only">파일 업로드</span></button>
+												</div>
+											</div>
+											<div class="media-right">
+												<button type="button" class="btn bg-navy">등록</button>
+											</div>
+										</form>
+									</div>
+								</li>
+								<!-- 대대댓글 이상
+									[D] 구조는 댓글과 같은 위계인데 본문 내용앞에 원댓글에 닉네님을 표시해서 누구에게 대답했는지 알 수 있게
+								-->
+								<li class="cmt-rere">
+									<div class="cmt-hd clearfix">
+										<div class="pull-left">
+											<a class="name" href="">
+												<img class="img-circle" src="assets/img/female.png" alt=""> 박흥부
+											</a>
+											<small class="date font-sp">2016.08.18 21:34</small>
+										</div>
+										<div class="pull-right react dropdown">
+											<button type="button" class="no-style dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="xi-ellipsis-v"></i><span class="sr-only">더보기</span></button>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li><a href="" data-toggle="modal" data-target="#report"><i class="xi-lock"></i> <span>신고</span></a></li>
+												<!-- 권한자 -->
+												<li><a href="" onClick="confirm('삭제하시겠습니까?');return false;"><i class="xi-trash"></i> <span>삭제</span></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="cnt">
+										<a class="name" href="">@홍길동</a>
+										그러세요? 제가 질문좀 할게요~
+									</div>
+									<div class="cmt-ft react clearfix">
+										<div class="pull-left">
+										</div>
+										<div class="pull-right">
+											<button type="button" class="no-style color-red" onclick="$(this).toggleClass('animated jello').find('i').toggleClass('xi2-heart-o xi2-heart');return false;" title="좋아요"><i class="xi2-heart-o"></i><span class="sr-only">좋아요</span> 14</button>
+											<button type="button" class="no-style" onClick="$(this).parents('.cmt-ft').next().toggle();"><i class="xi2-message-o"></i><span class="sr-only">대댓글</span> 12</button>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="cmt-hd clearfix">
+										<div class="pull-left">
+											<a class="name" href="">
+												<img class="img-circle" src="assets/img/female.png" alt=""> 홍길동
+											</a>
+											<small class="date font-sp">2016.08.18 21:34</small>
+										</div>
+										<div class="pull-right react dropdown">
+											<button type="button" class="no-style dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="xi-ellipsis-v"></i><span class="sr-only">더보기</span></button>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li><a href="" data-toggle="modal" data-target="#report"><i class="xi-lock"></i> <span>신고</span></a></li>
+												<!-- 권한자 -->
+												<li><a href="" onClick="confirm('삭제하시겠습니까?');return false;"><i class="xi-trash"></i> <span>삭제</span></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="cnt">
+										안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요. 안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요.
+									</div>
+									<div class="cmt-ft react clearfix">
+										<div class="pull-left">
+										</div>
+										<div class="pull-right">
+											<button type="button" class="no-style color-red" onclick="$(this).toggleClass('animated jello').find('i').toggleClass('xi2-heart-o xi2-heart');return false;" title="좋아요"><i class="xi2-heart-o"></i><span class="sr-only">좋아요</span> 14</button>
+											<button type="button" class="no-style" onClick="$(this).parents('.cmt-ft').next().toggle();"><i class="xi2-message-o"></i><span class="sr-only">대댓글</span> 12</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="btn-more-wrp">
+								<a class="btn-more v2" href="">대댓글 더보기 <i class="xi-plus"></i></a>
+							</div>
+							<form class="media frm-wrt">
+								<div class="media-body">
+									<textarea class="form-control" placeholder="대댓글을 입력해주세요"></textarea>
+									<div class="cmt-upload">
+										<button type="button" class="no-style" title="사진 업로드"><i class="xi2-camera"></i><span class="sr-only">사진 업로드</span></button>
+										<button type="button" class="no-style" title="파일 업로드"><i class="xi2-attachment"></i><span class="sr-only">파일 업로드</span></button>
+									</div>
+								</div>
+								<div class="media-right">
+									<button type="button" class="btn bg-navy">등록</button>
+								</div>
+							</form>
+							<div class="btn-ctm-clse-wrp">
+								<button type="button" class="btn-ctm-clse" onClick="$(this).parents('.lst-cmt-re').hide();">대댓글 닫기 <i class="xi-angle-up"></i></button>
+							</div>
+						</div>
+						<!--// 대댓글 -->
+					</li>
+					<li>
+						<div class="cmt-hd clearfix">
+							<div class="pull-left">
+								<a class="name" href="">
+									<img class="img-circle" src="assets/img/female.png" alt=""> 홍길동
+								</a>
+								<small class="date font-sp">2016.08.18 21:34</small>
+							</div>
+							<div class="pull-right react dropdown">
+								<button type="button" class="no-style dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="xi-ellipsis-v"></i><span class="sr-only">더보기</span></button>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="" data-toggle="modal" data-target="#report"><i class="xi-lock"></i> <span>신고</span></a></li>
+									<!-- 권한자 -->
+									<li><a href="" onClick="confirm('삭제하시겠습니까?');return false;"><i class="xi-trash"></i> <span>삭제</span></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="cnt">
+							안ㅈ하세요. 24기 였습니다. 질문해주시면 답해드릴게요. 안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요.
+						</div>
+						<div class="cmt-ft react clearfix">
+							<div class="pull-left">
+							</div>
+							<div class="pull-right">
+								<button type="button" class="no-style color-red" onclick="$(this).toggleClass('animated jello').find('i').toggleClass('xi2-heart-o xi2-heart');return false;" title="좋아요"><i class="xi2-heart-o"></i><span class="sr-only">좋아요</span> 14</button>
+								<button type="button" class="no-style"><i class="xi2-message-o"></i><span class="sr-only">대댓글</span> 12</button>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cmt-hd clearfix">
+							<div class="pull-left">
+								<a class="name" href="">
+									<img class="img-circle" src="assets/img/female.png" alt=""> 홍길동
+								</a>
+								<small class="date font-sp">2016.08.18 21:34</small>
+							</div>
+							<div class="pull-right react dropdown">
+								<button type="button" class="no-style dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="xi-ellipsis-v"></i><span class="sr-only">더보기</span></button>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="" data-toggle="modal" data-target="#report"><i class="xi-lock"></i> <span>신고</span></a></li>
+									<!-- 권한자 -->
+									<li><a href="" onClick="confirm('삭제하시겠습니까?');return false;"><i class="xi-trash"></i> <span>삭제</span></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="cnt">
+							안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요. 안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요.
+						</div>
+						<div class="cmt-ft react clearfix">
+							<div class="pull-left">
+							</div>
+							<div class="pull-right">
+								<button type="button" class="no-style color-red" onclick="$(this).toggleClass('animated jello').find('i').toggleClass('xi2-heart-o xi2-heart');return false;" title="좋아요"><i class="xi2-heart-o"></i><span class="sr-only">좋아요</span> 14</button>
+								<button type="button" class="no-style"><i class="xi2-message-o"></i><span class="sr-only">대댓글</span> 12</button>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cmt-hd clearfix">
+							<div class="pull-left">
+								<a class="name" href="">
+									<img class="img-circle" src="assets/img/female.png" alt=""> 홍길동
+								</a>
+								<small class="date font-sp">2016.08.18 21:34</small>
+							</div>
+							<div class="pull-right react dropdown">
+								<button type="button" class="no-style dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="xi-ellipsis-v"></i><span class="sr-only">더보기</span></button>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="" data-toggle="modal" data-target="#report"><i class="xi-lock"></i> <span>신고</span></a></li>
+									<!-- 권한자 -->
+									<li><a href="" onClick="confirm('삭제하시겠습니까?');return false;"><i class="xi-trash"></i> <span>삭제</span></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="cnt">
+							안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요. 안녕하세요. 24기 였습니다. 질문해주시면 답해드릴게요.
+						</div>
+						<div class="cmt-ft react clearfix">
+							<div class="pull-left">
+							</div>
+							<div class="pull-right">
+								<button type="button" class="no-style color-red" onclick="$(this).toggleClass('animated jello').find('i').toggleClass('xi2-heart-o xi2-heart');return false;" title="좋아요"><i class="xi2-heart-o"></i><span class="sr-only">좋아요</span> 14</button>
+								<button type="button" class="no-style"><i class="xi2-message-o"></i><span class="sr-only">대댓글</span> 12</button>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- [D] 더보기는 새창으로 -->
+				<div class="btn-more-wrp">
+					<a class="btn-more v2" href="view_comment.html">댓글 더보기 <i class="xi-plus"></i></a>
+				</div>
+			</section>
+		</div>
+	</article>
+	<div id="viewRelated" class="view-related">
+		<!-- 이 기업의 로켓 -->
+		<section class="lst-card">
+			<header class="headline2">
+				<h2><span class="color-red">이 기업</span>의 로켓</h2>
+			</header>
+			<!-- 목록:카드+슬라이드형 -->
+			<div class="slider-card">
+				<div class="swiper-container">
+					<ul class="swiper-wrapper rocket-wrp clearfix">
+						<!-- 모집종료 -->
+						<li class="swiper-slide">
+							<!-- 학생참여 cate-1 -->
+							<div class="rocket disabled cate-1">
+								<a class="card" href="view.html">
+									<div class="tmb-wrp">
+										<img class="img-responsive" src="assets/_temp/1.jpg" alt="">	
+									</div>
+									<div class="ribbon-wrp">
+										<b class="d-day v2 bg-grey">모집종료</b>
+									</div>
+									<div class="hover-cnt">
+										<div>
+											<div class="category-wrp">
+												<b class="category">학생참여</b>
+											</div>
+											<h5 class="step1">
+												<strong>[삼성전자]</strong> 
+												<span class="tit">SLB 5기 모집합니다. SLB 5기 모집합니다.</span>
+											</h5>
+											<div class="step2">
+												왕복항공권, 여행지원금
+											</div>
+											<div class="step3">
+												3개월 | 전국 대학생 | 24명 | 격주 모임
+											</div>
+											<div class="step4">
+												SNS홍보, 견학, 해외 시장조사 활동
+											</div>
+											<div class="meta">
+												<span title="기간"><i class="xi-time"></i><span class="sr-only">기간</span> <b>5시간 전</b></span>
+												<span title="조회수"><i class="xi-eye"></i><span class="sr-only">조회수</span><b>10</b></span>
+												<span title="찜한수"><i class="xi2-heart-o"></i><span class="sr-only">찜한수</span><b>8</b></span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</li>
+						<!-- 모집종료 -->
+						<li class="swiper-slide">
+							<!-- 해외탐방 cate-2 -->
+							<div class="rocket disabled cate-2">
+								<a class="card" href="view.html">
+									<div class="tmb-wrp">
+										<img class="img-responsive" src="assets/_temp/2.jpg" alt="">	
+									</div>
+									<div class="ribbon-wrp">
+										<b class="d-day v2 bg-grey">모집종료</b>
+									</div>
+									<div class="hover-cnt">
+										<div>
+											<div class="category-wrp">
+												<b class="category">해외탐방</b>
+											</div>
+											<h5 class="step1">
+												<strong>[삼성전자]</strong> 
+												<span class="tit">SLB 5기 모집합니다. SLB 5기 모집합니다.</span>
+											</h5>
+											<div class="step2">
+												왕복항공권, 여행지원금
+											</div>
+											<div class="step3">
+												3개월 | 전국 대학생 | 24명 | 격주 모임
+											</div>
+											<div class="step4">
+												SNS홍보, 견학, 해외 시장조사 활동
+											</div>
+											<div class="meta">
+												<span title="기간"><i class="xi-time"></i><span class="sr-only">기간</span> <b>5시간 전</b></span>
+												<span title="조회수"><i class="xi-eye"></i><span class="sr-only">조회수</span><b>10</b></span>
+												<span title="찜한수"><i class="xi2-heart-o"></i><span class="sr-only">찜한수</span><b>8</b></span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</li>
+						<!-- 모집종료 -->
+						<li class="swiper-slide">
+							<!-- 공모전 cate-3 -->
+							<div class="rocket cate-3">
+								<a class="card" href="view.html">
+									<div class="tmb-wrp">
+										<img class="img-responsive" src="assets/_temp/3.jpg" alt="">	
+									</div>
+									<div class="ribbon-wrp">
+										<b class="d-day v2 bg-grey">모집종료</b>
+									</div>
+									<div class="hover-cnt">
+										<div>
+											<div class="category-wrp">
+												<b class="category">공모전</b>
+											</div>
+											<h5 class="step1">
+												<strong>[삼성전자]</strong> 
+												<span class="tit">SLB 5기 모집합니다. SLB 5기 모집합니다.</span>
+											</h5>
+											<div class="step2">
+												왕복항공권, 여행지원금
+											</div>
+											<div class="step3">
+												3개월 | 전국 대학생 | 24명 | 격주 모임
+											</div>
+											<div class="step4">
+												SNS홍보, 견학, 해외 시장조사 활동
+											</div>
+											<div class="meta">
+												<span title="기간"><i class="xi-time"></i><span class="sr-only">기간</span> <b>5시간 전</b></span>
+												<span title="조회수"><i class="xi-eye"></i><span class="sr-only">조회수</span><b>10</b></span>
+												<span title="찜한수"><i class="xi2-heart-o"></i><span class="sr-only">찜한수</span><b>8</b></span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</li>
+						<!-- 모집종료 -->
+						<li class="swiper-slide">
+							<!-- 봉사활동 cate-4 -->
+							<div class="rocket cate-4">
+								<a class="card" href="view.html">
+									<div class="tmb-wrp">
+										<img class="img-responsive" src="assets/_temp/4.jpg" alt="">	
+									</div>
+									<div class="ribbon-wrp">
+										<b class="d-day v2 bg-grey">모집종료</b>
+									</div>
+									<div class="hover-cnt">
+										<div>
+											<div class="category-wrp">
+												<b class="category">봉사활동</b>
+											</div>
+											<h5 class="step1">
+												<strong>[삼성전자]</strong> 
+												<span class="tit">SLB 5기 모집합니다. SLB 5기 모집합니다.</span>
+											</h5>
+											<div class="step2">
+												왕복항공권, 여행지원금
+											</div>
+											<div class="step3">
+												3개월 | 전국 대학생 | 24명 | 격주 모임
+											</div>
+											<div class="step4">
+												SNS홍보, 견학, 해외 시장조사 활동
+											</div>
+											<div class="meta">
+												<span title="기간"><i class="xi-time"></i><span class="sr-only">기간</span> <b>5시간 전</b></span>
+												<span title="조회수"><i class="xi-eye"></i><span class="sr-only">조회수</span><b>10</b></span>
+												<span title="찜한수"><i class="xi2-heart-o"></i><span class="sr-only">찜한수</span><b>8</b></span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- 이 로켓과 유사한 로켓 -->
+		<section class="lst-card">
+			<header class="headline2">
+				<h2 class="pull-right">이 로켓과 <span class="color-red">유사한</span> 로켓</h2>
+			</header>
+			<!-- 목록:카드+슬라이드형 -->
+			<div class="slider-card">
+				<div class="swiper-container" dir="rtl">
+					<ul class="swiper-wrapper rocket-wrp clearfix">
+						<li class="swiper-slide">
+							<!-- 학생참여 cate-1 -->
+							<div class="rocket cate-1">
+								<a class="card" href="view.html">
+									<div class="tmb-wrp">
+										<img class="img-responsive" src="assets/_temp/1.jpg" alt="">	
+									</div>
+									<div class="ribbon-wrp">
+										<b class="d-day">D-3</b>
+									</div>
+									<div class="hover-cnt">
+										<div>
+											<div class="category-wrp">
+												<b class="category">학생참여</b>
+											</div>
+											<h5 class="step1">
+												<strong>[삼성전자]</strong> 
+												<span class="tit">SLB 5기 모집합니다. SLB 5기 모집합니다.</span>
+											</h5>
+											<div class="step2">
+												왕복항공권, 여행지원금
+											</div>
+											<div class="step3">
+												3개월 | 전국 대학생 | 24명 | 격주 모임
+											</div>
+											<div class="step4">
+												SNS홍보, 견학, 해외 시장조사 활동
+											</div>
+											<div class="meta">
+												<span title="기간"><i class="xi-time"></i><span class="sr-only">기간</span> <b>5시간 전</b></span>
+												<span title="조회수"><i class="xi-eye"></i><span class="sr-only">조회수</span><b>10</b></span>
+												<span title="찜한수"><i class="xi2-heart-o"></i><span class="sr-only">찜한수</span><b>8</b></span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="media fdb-btn">
+									<div class="media-body media-middle">
+										<button type="button" onclick="scrapRocket($(this));return false;"><i class="xi2-heart-o"></i> <span class="sr-only">찜하기</span></button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="swiper-slide">
+							<!-- 해외탐방 cate-2 -->
+							<div class="rocket cate-2">
+								<a class="card" href="view.html">
+									<div class="tmb-wrp">
+										<img class="img-responsive" src="assets/_temp/2.jpg" alt="">	
+									</div>
+									<div class="ribbon-wrp">
+										<b class="d-day">D-3</b>
+									</div>
+									<div class="hover-cnt">
+										<div>
+											<div class="category-wrp">
+												<b class="category">해외탐방</b>
+											</div>
+											<h5 class="step1">
+												<strong>[삼성전자]</strong> 
+												<span class="tit">SLB 5기 모집합니다. SLB 5기 모집합니다.</span>
+											</h5>
+											<div class="step2">
+												왕복항공권, 여행지원금
+											</div>
+											<div class="step3">
+												3개월 | 전국 대학생 | 24명 | 격주 모임
+											</div>
+											<div class="step4">
+												SNS홍보, 견학, 해외 시장조사 활동
+											</div>
+											<div class="meta">
+												<span title="기간"><i class="xi-time"></i><span class="sr-only">기간</span> <b>5시간 전</b></span>
+												<span title="조회수"><i class="xi-eye"></i><span class="sr-only">조회수</span><b>10</b></span>
+												<span title="찜한수"><i class="xi2-heart-o"></i><span class="sr-only">찜한수</span><b>8</b></span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="media fdb-btn">
+									<div class="media-body media-middle">
+										<button type="button" onclick="scrapRocket($(this));return false;"><i class="xi2-heart-o"></i> <span class="sr-only">찜하기</span></button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="swiper-slide">
+							<!-- 공모전 cate-3 -->
+							<div class="rocket cate-3">
+								<a class="card" href="view.html">
+									<div class="tmb-wrp">
+										<img class="img-responsive" src="assets/_temp/3.jpg" alt="">	
+									</div>
+									<div class="ribbon-wrp">
+										<b class="d-day">D-3</b>
+									</div>
+									<div class="hover-cnt">
+										<div>
+											<div class="category-wrp">
+												<b class="category">공모전</b>
+											</div>
+											<h5 class="step1">
+												<strong>[삼성전자]</strong> 
+												<span class="tit">SLB 5기 모집합니다. SLB 5기 모집합니다.</span>
+											</h5>
+											<div class="step2">
+												왕복항공권, 여행지원금
+											</div>
+											<div class="step3">
+												3개월 | 전국 대학생 | 24명 | 격주 모임
+											</div>
+											<div class="step4">
+												SNS홍보, 견학, 해외 시장조사 활동
+											</div>
+											<div class="meta">
+												<span title="기간"><i class="xi-time"></i><span class="sr-only">기간</span> <b>5시간 전</b></span>
+												<span title="조회수"><i class="xi-eye"></i><span class="sr-only">조회수</span><b>10</b></span>
+												<span title="찜한수"><i class="xi2-heart-o"></i><span class="sr-only">찜한수</span><b>8</b></span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="media fdb-btn">
+									<div class="media-body media-middle">
+										<button type="button" onclick="scrapRocket($(this));return false;"><i class="xi2-heart-o"></i> <span class="sr-only">찜하기</span></button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="swiper-slide">
+							<!-- 봉사활동 cate-4 -->
+							<div class="rocket cate-4">
+								<a class="card" href="view.html">
+									<div class="tmb-wrp">
+										<img class="img-responsive" src="assets/_temp/4.jpg" alt="">	
+									</div>
+									<div class="ribbon-wrp">
+										<b class="d-day">D-3</b>
+									</div>
+									<div class="hover-cnt">
+										<div>
+											<div class="category-wrp">
+												<b class="category">봉사활동</b>
+											</div>
+											<h5 class="step1">
+												<strong>[삼성전자]</strong> 
+												<span class="tit">SLB 5기 모집합니다. SLB 5기 모집합니다.</span>
+											</h5>
+											<div class="step2">
+												왕복항공권, 여행지원금
+											</div>
+											<div class="step3">
+												3개월 | 전국 대학생 | 24명 | 격주 모임
+											</div>
+											<div class="step4">
+												SNS홍보, 견학, 해외 시장조사 활동
+											</div>
+											<div class="meta">
+												<span title="기간"><i class="xi-time"></i><span class="sr-only">기간</span> <b>5시간 전</b></span>
+												<span title="조회수"><i class="xi-eye"></i><span class="sr-only">조회수</span><b>10</b></span>
+												<span title="찜한수"><i class="xi2-heart-o"></i><span class="sr-only">찜한수</span><b>8</b></span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="media fdb-btn">
+									<div class="media-body media-middle">
+										<button type="button" onclick="scrapRocket($(this));return false;"><i class="xi2-heart-o"></i> <span class="sr-only">찜하기</span></button>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- 이 로켓 지원자가 지원한 로켓 -->
+		<section class="lst-card">
+			<header class="headline2">
+				<h2>이 로켓 <span class="color-red">지원자가 지원한</span> 로켓</h2>
+			</header>
+			<!-- 목록:카드+슬라이드형 -->
+			<div class="slider-card">
+				<div class="swiper-container">
+					<ul class="swiper-wrapper rocket-wrp clearfix">
+						<li class="swiper-slide">
+							<!-- 학생참여 cate-1 -->
+							<div class="rocket cate-1">
+								<a class="card" href="view.html">
+									<div class="tmb-wrp">
+										<img class="img-responsive" src="assets/_temp/1.jpg" alt="">	
+									</div>
+									<div class="ribbon-wrp">
+										<b class="d-day">D-3</b>
+									</div>
+									<div class="hover-cnt">
+										<div>
+											<div class="category-wrp">
+												<b class="category">학생참여</b>
+											</div>
+											<h5 class="step1">
+												<strong>[삼성전자]</strong> 
+												<span class="tit">SLB 5기 모집합니다. SLB 5기 모집합니다.</span>
+											</h5>
+											<div class="step2">
+												왕복항공권, 여행지원금
+											</div>
+											<div class="step3">
+												3개월 | 전국 대학생 | 24명 | 격주 모임
+											</div>
+											<div class="step4">
+												SNS홍보, 견학, 해외 시장조사 활동
+											</div>
+											<div class="meta">
+												<span title="기간"><i class="xi-time"></i><span class="sr-only">기간</span> <b>5시간 전</b></span>
+												<span title="조회수"><i class="xi-eye"></i><span class="sr-only">조회수</span><b>10</b></span>
+												<span title="찜한수"><i class="xi2-heart-o"></i><span class="sr-only">찜한수</span><b>8</b></span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="media fdb-btn">
+									<div class="media-body media-middle">
+										<button type="button" onclick="scrapRocket($(this));return false;"><i class="xi2-heart-o"></i> <span class="sr-only">찜하기</span></button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="swiper-slide">
+							<!-- 해외탐방 cate-2 -->
+							<div class="rocket cate-2">
+								<a class="card" href="view.html">
+									<div class="tmb-wrp">
+										<img class="img-responsive" src="assets/_temp/2.jpg" alt="">	
+									</div>
+									<div class="ribbon-wrp">
+										<b class="d-day">D-3</b>
+									</div>
+									<div class="hover-cnt">
+										<div>
+											<div class="category-wrp">
+												<b class="category">해외탐방</b>
+											</div>
+											<h5 class="step1">
+												<strong>[삼성전자]</strong> 
+												<span class="tit">SLB 5기 모집합니다. SLB 5기 모집합니다.</span>
+											</h5>
+											<div class="step2">
+												왕복항공권, 여행지원금
+											</div>
+											<div class="step3">
+												3개월 | 전국 대학생 | 24명 | 격주 모임
+											</div>
+											<div class="step4">
+												SNS홍보, 견학, 해외 시장조사 활동
+											</div>
+											<div class="meta">
+												<span title="기간"><i class="xi-time"></i><span class="sr-only">기간</span> <b>5시간 전</b></span>
+												<span title="조회수"><i class="xi-eye"></i><span class="sr-only">조회수</span><b>10</b></span>
+												<span title="찜한수"><i class="xi2-heart-o"></i><span class="sr-only">찜한수</span><b>8</b></span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="media fdb-btn">
+									<div class="media-body media-middle">
+										<button type="button" onclick="scrapRocket($(this));return false;"><i class="xi2-heart-o"></i> <span class="sr-only">찜하기</span></button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="swiper-slide">
+							<!-- 공모전 cate-3 -->
+							<div class="rocket cate-3">
+								<a class="card" href="view.html">
+									<div class="tmb-wrp">
+										<img class="img-responsive" src="assets/_temp/3.jpg" alt="">	
+									</div>
+									<div class="ribbon-wrp">
+										<b class="d-day">D-3</b>
+									</div>
+									<div class="hover-cnt">
+										<div>
+											<div class="category-wrp">
+												<b class="category">공모전</b>
+											</div>
+											<h5 class="step1">
+												<strong>[삼성전자]</strong> 
+												<span class="tit">SLB 5기 모집합니다. SLB 5기 모집합니다.</span>
+											</h5>
+											<div class="step2">
+												왕복항공권, 여행지원금
+											</div>
+											<div class="step3">
+												3개월 | 전국 대학생 | 24명 | 격주 모임
+											</div>
+											<div class="step4">
+												SNS홍보, 견학, 해외 시장조사 활동
+											</div>
+											<div class="meta">
+												<span title="기간"><i class="xi-time"></i><span class="sr-only">기간</span> <b>5시간 전</b></span>
+												<span title="조회수"><i class="xi-eye"></i><span class="sr-only">조회수</span><b>10</b></span>
+												<span title="찜한수"><i class="xi2-heart-o"></i><span class="sr-only">찜한수</span><b>8</b></span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="media fdb-btn">
+									<div class="media-body media-middle">
+										<button type="button" onclick="scrapRocket($(this));return false;"><i class="xi2-heart-o"></i> <span class="sr-only">찜하기</span></button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="swiper-slide">
+							<!-- 봉사활동 cate-4 -->
+							<div class="rocket cate-4">
+								<a class="card" href="view.html">
+									<div class="tmb-wrp">
+										<img class="img-responsive" src="assets/_temp/4.jpg" alt="">	
+									</div>
+									<div class="ribbon-wrp">
+										<b class="d-day">D-3</b>
+									</div>
+									<div class="hover-cnt">
+										<div>
+											<div class="category-wrp">
+												<b class="category">봉사활동</b>
+											</div>
+											<h5 class="step1">
+												<strong>[삼성전자]</strong> 
+												<span class="tit">SLB 5기 모집합니다. SLB 5기 모집합니다.</span>
+											</h5>
+											<div class="step2">
+												왕복항공권, 여행지원금
+											</div>
+											<div class="step3">
+												3개월 | 전국 대학생 | 24명 | 격주 모임
+											</div>
+											<div class="step4">
+												SNS홍보, 견학, 해외 시장조사 활동
+											</div>
+											<div class="meta">
+												<span title="기간"><i class="xi-time"></i><span class="sr-only">기간</span> <b>5시간 전</b></span>
+												<span title="조회수"><i class="xi-eye"></i><span class="sr-only">조회수</span><b>10</b></span>
+												<span title="찜한수"><i class="xi2-heart-o"></i><span class="sr-only">찜한수</span><b>8</b></span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="media fdb-btn">
+									<div class="media-body media-middle">
+										<button type="button" onclick="scrapRocket($(this));return false;"><i class="xi2-heart-o"></i> <span class="sr-only">찜하기</span></button>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+<!--// view -->
+
+</div>
+
+	</div>
+	<!--// container -->
+
+	<!-- footer -->
+	<footer id="ft">
+		<div class="container-fluid w1200">
+			<h2 class="font-sp color-red"><i class="xi-rocket"></i> <strong>ROCKET</strong></h2>
+			<div class="ft-sns">
+				<a href="" target="_blank" title="페이스북"><i class="xi-facebook"></i><span class="sr-only">페이스북</span></a>
+				<a href="" target="_blank" title="카카오스토리"><i class="xi-kakaostory"></i><span class="sr-only">카카오스토리</span></a>
+			</div>
+			<div class="ft-policy">
+				<ul class="ft-mn list-inline">
+					<li><a href="info_about.html">서비스 소개</a></li>
+					<li><a href="info_terms.html">이용약관</a></li>
+					<li><a href="info_privacy.html">개인정보취급방침</a></li>
+					<li><a href="info_faq.html">고객센터</a></li>
+					<li><a href="info_collaboration.html">제휴문의</a></li>
+				</ul>
+				<address>COPYRIGHT &copy; ROCKET. All RIGHTS RESERVED</address>
+			</div>
+		</div>
+		<a id="goTop" href="#wrap"><i class="xi2-caret-up-circle"></i><span class="sr-only">위로</span></a>
+	</footer>
+	<!--// footer -->
+
+</div>
+<!-- //wrap -->
+
+<!-- sns -->
+<div id="sns" class="modal fade" tabindex="-1" aria-hidden="true">
+	<div>
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="xi-close"></i></span></button>
+		<ul class="login-bx pa30">
+			<li class="animated lightSpeedIn">
+				<a class="bg-kakao skew" href="#">
+					<span><i class="xi-kakaotalk"></i> <strong>카카오톡으로 보내기</strong></span>
+				</a>
+			</li>
+			<li class="animated lightSpeedIn ani-delay01">
+				<a class="bg-fb skew" href="#">
+					<span><i class="xi-facebook"></i> <strong>페이스북으로 보내기</strong></span>
+				</a>
+			</li>
+			<li class="animated lightSpeedIn ani-delay02">
+				<span class="bg-red skew">
+					<span>
+						<i class="xi-link"></i> <strong>URL복사하기</strong>
+						<div class="share-url">
+							<input type="text" class="form-control input-sm" value="http://myrocket.kr/12315666/" readonly>
+						</div>
+					</span>
+				</span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!-- 신고하기 -->
+<div id="report" class="modal fade modal-alert" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog animated flipInX">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title font_sp">이 댓글을 신고하시겠습니까</h4>
+			</div>
+			<div class="modal-body">
+				<div class="w300">
+					<h5 class="mb20">신고사유를 선택해주세요</h5>
+					<ul>
+						<li class="radio">
+							<label>
+								<input type="radio" name="report" value="" checked> 부적절한 홍보 게시물 
+							</label>
+						</li>
+						<li class="radio">
+							<label>
+								<input type="radio" name="report" value=""> 음란성 또는 폭력성 등의 부적합한 내용
+							</label>
+						</li>
+						<li class="radio">
+							<label>
+								<input type="radio" name="report" value=""> 특정인 대상의 비방/욕설 
+							</label>
+						</li>
+						<li class="radio">
+							<label>
+								<input type="radio" name="report" value=""> 명예훼손/사생활 침해 및 저작권침해 등
+							</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn" data-dismiss="modal">취소</button>
+				<button type="button" class="btn btn-primary">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- js -->
+<!-- lib -->
+<script src="assets/libs/Swiper/js/swiper.jquery.min.js"></script>
+<script src="assets/libs/moment.min.js"></script>
+<script src="assets/libs/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<script src="assets/libs/jquery.knob.min.js"></script>
+<!-- common -->
+<script src="assets/js/common.js"></script>
+
+<!-- page -->
+<script>
+// 댓글 통계  http://anthonyterrien.com/knob/
+$("input.dial").knob();
+
+// 상단고정메뉴
+var offsetView = 146;
+if($(window).width()<993){
+	offsetSide = 48;
+}
+$('body').scrollspy({
+	target:'#viewNav',
+	offset:offsetView+1
+});
+$('body').on('click','.view-nav a[data-target]',function(){
+	scrollMove($(this).attr('data-target'),offsetView);
+	return false;
+});
+
+// scroll
+	var w=$(window),
+	$body=$('body'),
+	viewHd=$("header.view-hd>div"),
+	viewRelated=$("#viewRelated"),
+	viewNav = $('nav.view-nav');
+
+	w.scroll(function(){
+		var sT=w.scrollTop(),
+		endPos=viewRelated.offset().top,
+		vH=viewHd.height()+228;
+
+		if(sT>viewNav.offset().top){
+			$body.addClass('view-scroll');
+		} else {
+			$body.removeClass('view-scroll');
+		}
+
+		if(sT>endPos-vH){
+			var vS = endPos-vH-sT;
+			viewHd.css({
+				'transform':'translate(0,'+vS+'px)'
+			});
+		} else {
+			viewHd.removeAttr('style');
+		}
+	});
+
+// slider
+var swiper1 = new Swiper('.slider-card>div', {
+	loop:true,
+	slidesPerView:4,
+	slidesPerGroup:4,
+	spaceBetween:0,
+	breakpoints:{
+		768: {
+			slidesPerView:2,
+			slidesPerGroup:2,
+			spaceBetween:0
+		}
+	},
+	paginationClickable: true,
+	preventClicks:false,
+	loop:false,
+	freeMode:true
+});
+</script>
+
+</body>
+</html>

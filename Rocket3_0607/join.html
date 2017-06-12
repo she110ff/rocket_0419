@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Rocket</title>
+
+<!-- css -->
+<link rel="stylesheet" href="assets/css/import.css">
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<header id="hd" class="hd-fixed">
+		<h1 class="ellipsis hidden-lg hidden-md animated lightSpeedIn ani-duration15">ROCKET</h1>
+		<!-- 좌측 -->
+		<div id="hdLt" class="hd-icon-wrp-lt animated fadeInLeft">
+			<!-- 검색/맞춤 버튼 : 메인과 알림로켓에서만 검색 아이콘 xi-bell xi-magnifier -->
+			<a class="hd-icon" href="" aria-expanded="false" aria-controls="searchTitle" title="검색 더보기" onClick="menuOpen('side-nav-left');return false;"><i class="xi-magnifier"></i><span class="sr-only">검색 더보기</span></a>
+		</div>
+		<!-- 아이로켓 : 오늘 본 페이지-->
+		<div id="I-Rocket" class="login-gate animated rollIn">
+			<div>
+				<a href="" data-toggle="modal" data-target="#todayViewed"><span class="sr-only">오늘 본 페이지</span></a>
+			</div>
+		</div>
+		<!-- 우측 -->
+		<div id="hdRt" class="hd-icon-wrp-rt animated fadeInRight">
+			<a class="hd-icon" href="guide.html" title="사용매뉴얼"><i class="xi-paper"></i><span class="sr-only">사용매뉴얼</span></a>
+			<a class="hd-icon" href="" title="로그인/회원가입" onClick="menuOpen('side-nav-right');return false;"><i class="xi-user"></i><span class="sr-only">로그인/회원가입</span></a>
+		</div>
+		<!-- gnb 
+			[D]  로그인 class=after_login 로 구분
+		-->
+		<nav id="gnb" class="gnb">
+			<ul>
+				<li><h2><a class="font-sp color_rocket" href="index.html"><i class="xi-rocket"></i><span>Rocket</span></a></h2></li>
+				<li class="active"><a href="rocket.html"><i class="xi-satellite"></i><span>로켓기지</span></a></li>
+				<li><a href="recommend.html"><i class="xi-present"></i><span>알림로켓<b class="animated rubberBand">12</b></span></a></li>
+				<li><a href="scrap.html"><i class="xi-tagged-book"></i><span>찜한로켓<b class="animated rubberBand">?</b></span></a></li>
+				<li><a href="mypage_member.html"><i class="xi-flag-triangle"></i><span>탑승로켓<b class="animated rubberBand">8</b></span></a></li>
+			</ul>
+		</nav>
+	</header>
+	<!--// header -->
+
+	<!-- container : mypage -->
+	<div id="container" class="container-mypage">
+
+<!-- mypage include -->
+
+<div id="mypage" class="page-mypage page-join">
+	<!-- 상단고정 -->
+	<section class="sub-top">
+		<div class="w1200 clearfix">
+			<h1 class="font-ns">ROCKET</h1>
+			<!-- 빵조각메뉴 -->
+			<ol class="breadcrumb">
+				<li><a href="rocket.html">ROCKET</a></li>
+				<li>회원가입</li>
+			</ol>
+			<div class="visible-xs-block visible-sm-block">
+				<!-- 좌측 : 뒤로가기 등 -->
+				<div class="hd-icon-wrp-lt">
+					<a class="nav-close animated fadeInLeft" href=""><span class="sr-only">뒤로가기</span><i class="xi-angle-left"></i></a>
+				</div>
+				<!-- 우측 -->
+				<div class="hd-icon-wrp-rt">
+					<a class="btn btn-sm btn-border-wh" href="" data-toggle="modal" data-target="#login">로그인</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 가입단계표시 -->
+	<nav class="nav-fixed">
+		<ul class="nav">
+			<li class="active"><a>1. 소셜계정가입</a></li>
+			<li><a>2. 필수정보입력</a></li>
+			<li><a>3. 퀵 알림설정</a></li>
+		</ul>
+	</nav>
+	<div id="join" class="w1200">
+		<div class="container-fluid">
+			<div class="row">
+				<!--- 약관동의 섹션 -->
+				<section class="card3 col-md-6 pb0">
+					<div class="card-hd">
+						<h2 class="h2 mb0">서비스 이용 약관 동의</h2>
+						<div class="card-hd-rt">
+							<label class="mt5 fs15">
+								<input type="checkbox"> 전체동의
+							</label>
+						</div>
+					</div>
+					<!-- 목록:테이블형 -->
+					<div class="acc-lst term-lst row">
+						<ul>
+							<li>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox"> 이용약관에 동의 <small class="color-red">(필수)</small>
+									</label>
+								</div>
+								<a class="cnt-wrp" href="" data-accordion="#terms-1" data-parent="termsAccordion">
+									전문보기 <i class="xi-angle-down fr"></i>
+								</a>
+								<!-- 보기 -->
+								<div id="terms-1" data-accordion-parent="termsAccordion">
+									<div class="agree-bx">
+										<!-- 내용 -->
+										<div class="page">
+											<p>제 1 조 (목적)</p>
+											<p>이 약관은 리얼피크가 제공하는 제반 서비스의 이용과 관련하여 회사와 회원과의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.</p>
+											<p>제 2 조 (정의)</p>
+											<p>이 약관에서 사용하는 용어의 정의는 다음과 같습니다.<br>
+												① "서비스"라 함은 구현되는 단말기(PC, TV, 휴대형단말기 등의 각종 유무선 장치를 포함)와 상관없이 "회원"이 이용할 수 있는 네이버 및 네이버 관련 제반 서비스를 의미합니다.<br>
+												② "회원"이라 함은 회사의 "서비스"에 접속하여 이 약관에 따라 "회사"와 이용계약을 체결하고 "회사"가 제공하는 "서비스"를 이용하는 고객을 말합니다.<br>
+												③ "아이디(ID)"라 함은 "회원"의 식별과 "서비스" 이용을 위하여 "회원"이 정하고 "회사"가 승인하는 문자와 숫자의 조합을 의미합니다.<br>
+												④ "비밀번호"라 함은 "회원"이 부여 받은 "아이디와 일치되는 "회원"임을 확인하고 비밀보호를 위해 "회원" 자신이 정한 문자 또는 숫자의 조합을 의미합니다.<br>
+												⑤ "유료서비스"라 함은 "회사"가 유료로 제공하는 각종 온라인디지털콘텐츠(각종 정보콘텐츠, VOD, 아이템 기타 유료콘텐츠를 <br>
+												포함) 및 제반 서비스를 의미합니다.<br>
+												⑥ "포인트"라 함은 서비스의 효율적 이용을 위해 회사가 임의로 책정 또는 지급, 조정할 수 있는 재산적 가치가 없는 "서비스" 상의 <br>
+												가상 데이터를 의미합니다.<br>
+												⑦ "게시물"이라 함은 "회원"이 "서비스"를 이용함에 있어 "서비스상"에 게시한 부호ㆍ문자ㆍ음성ㆍ음향ㆍ화상ㆍ동영상 등의 정보 형태의 글, 사진, 동영상 및 각종 파일과 링크 등을 의미합니다.<br>
+											</p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox"> 개인정보 수집 및 이용에 대한 동의 <small class="color-red">(필수)</small>
+									</label>
+								</div>
+								<a class="cnt-wrp" href="" data-accordion="#terms-2" data-parent="termsAccordion">
+									전문보기 <i class="xi-angle-down fr"></i>
+								</a>
+								<!-- 보기 -->
+								<div id="terms-2" data-accordion-parent="termsAccordion">
+									<div class="agree-bx">
+										<!-- 내용 -->
+										<div class="page">
+											<p>제 1 조 (목적)</p>
+											<p>이 약관은 리얼피크가 제공하는 제반 서비스의 이용과 관련하여 회사와 회원과의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.</p>
+											<p>제 2 조 (정의)</p>
+											<p>이 약관에서 사용하는 용어의 정의는 다음과 같습니다.<br>
+												① "서비스"라 함은 구현되는 단말기(PC, TV, 휴대형단말기 등의 각종 유무선 장치를 포함)와 상관없이 "회원"이 이용할 수 있는 네이버 및 네이버 관련 제반 서비스를 의미합니다.<br>
+												② "회원"이라 함은 회사의 "서비스"에 접속하여 이 약관에 따라 "회사"와 이용계약을 체결하고 "회사"가 제공하는 "서비스"를 이용하는 고객을 말합니다.<br>
+												③ "아이디(ID)"라 함은 "회원"의 식별과 "서비스" 이용을 위하여 "회원"이 정하고 "회사"가 승인하는 문자와 숫자의 조합을 의미합니다.<br>
+												④ "비밀번호"라 함은 "회원"이 부여 받은 "아이디와 일치되는 "회원"임을 확인하고 비밀보호를 위해 "회원" 자신이 정한 문자 또는 숫자의 조합을 의미합니다.<br>
+												⑤ "유료서비스"라 함은 "회사"가 유료로 제공하는 각종 온라인디지털콘텐츠(각종 정보콘텐츠, VOD, 아이템 기타 유료콘텐츠를 <br>
+												포함) 및 제반 서비스를 의미합니다.<br>
+												⑥ "포인트"라 함은 서비스의 효율적 이용을 위해 회사가 임의로 책정 또는 지급, 조정할 수 있는 재산적 가치가 없는 "서비스" 상의 <br>
+												가상 데이터를 의미합니다.<br>
+												⑦ "게시물"이라 함은 "회원"이 "서비스"를 이용함에 있어 "서비스상"에 게시한 부호ㆍ문자ㆍ음성ㆍ음향ㆍ화상ㆍ동영상 등의 정보 형태의 글, 사진, 동영상 및 각종 파일과 링크 등을 의미합니다.<br>
+											</p>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- 목록:테이블형 -->
+				</section>
+	
+				<!--- 소셜링크 섹션 -->
+				<section class="card3 col-md-6">
+					<h2 class="h2 mb0">가입할 소셜계정 선택</h2>
+					<ul class="login-bx pa20">
+						<li>
+							<a class="bg-naver skew" href="#">
+								<span><i class="xi-naver"></i> <strong>네이버 계정으로 가입하기</strong></span>
+							</a>
+						</li>
+						<li>
+							<a class="bg-fb skew" href="#">
+								<span><i class="xi-facebook"></i> <strong>페이스북 계정으로 가입하기</strong></span>
+							</a>
+						</li>
+						<li>
+							<a class="bg-kakao skew" href="#">
+								<span><i class="xi2-kakao"></i> <strong>카카오톡 계정으로 가입하기</strong></span>
+							</a>
+						</li>
+						<li>
+							<a class="bg-google skew" href="#">
+								<span><i class="xi2-google"></i> <strong>구글 계정으로 가입하기</strong></span>
+							</a>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<!-- 하단고정메뉴 -->
+			<div class="btm-fixed">
+				<div class="btnarea">
+					<div>
+						<button type="button" class="btn btn-block btn-lg">취소하기</button>
+					</div>
+					<div>
+						<button type="button" class="btn btn-primary btn-block btn-lg" data-toggle="modal" data-target="#login">로그인</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// content include -->
+
+	</div>
+	<!--// container -->
+
+	<!-- footer -->
+	<footer id="ft">
+		<div class="container-fluid w1200">
+			<h2 class="font-sp color-red"><i class="xi-rocket"></i> <strong>ROCKET</strong></h2>
+			<div class="ft-sns">
+				<a href="" target="_blank" title="페이스북"><i class="xi-facebook"></i><span class="sr-only">페이스북</span></a>
+				<a href="" target="_blank" title="카카오스토리"><i class="xi-kakaostory"></i><span class="sr-only">카카오스토리</span></a>
+			</div>
+			<div class="ft-policy">
+				<ul class="ft-mn list-inline">
+					<li><a href="info_about.html">서비스 소개</a></li>
+					<li><a href="info_terms.html">이용약관</a></li>
+					<li><a href="info_privacy.html">개인정보취급방침</a></li>
+					<li><a href="info_faq.html">고객센터</a></li>
+					<li><a href="info_collaboration.html">제휴문의</a></li>
+				</ul>
+				<address>COPYRIGHT &copy; ROCKET. All RIGHTS RESERVED</address>
+			</div>
+		</div>
+		<a id="goTop" href="#wrap"><i class="xi2-caret-up-circle"></i><span class="sr-only">위로</span></a>
+	</footer>
+	<!--// footer -->
+
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<!-- lib -->
+<script src="assets/libs/Swiper/js/swiper.jquery.min.js"></script>
+<script src="assets/libs/moment.min.js"></script>
+<script src="assets/libs/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<!-- common -->
+<script src="assets/js/common.js"></script>
+</body>
+</html>
