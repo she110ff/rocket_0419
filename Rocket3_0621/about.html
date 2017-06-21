@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Rocket</title>
+
+<!-- css -->
+<link rel="stylesheet" href="assets/css/import.css">
+<!-- js -->		
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<header id="hd" class="hd-fixed">
+		<h1 class="ellipsis hidden-lg hidden-md animated lightSpeedIn ani-duration15">ROCKET</h1>
+		<!-- 좌측 -->
+		<div id="hdLt" class="hd-icon-wrp-lt animated fadeInLeft">
+			<!-- 검색/맞춤 버튼 : 메인과 알림로켓에서만 검색 아이콘 xi-bell xi-magnifier -->
+			<a class="hd-icon" href="" aria-expanded="false" aria-controls="searchTitle" title="검색 더보기" onClick="menuOpen('side-nav-left');return false;"><i class="xi-magnifier"></i><span class="sr-only">검색 더보기</span></a>
+		</div>
+		<!-- 아이로켓 : 오늘 본 페이지-->
+		<div id="I-Rocket" class="login-gate animated rollIn">
+			<div>
+				<a href="" data-toggle="modal" data-target="#todayViewed"><span class="sr-only">오늘 본 페이지</span></a>
+			</div>
+		</div>
+		<!-- 우측 -->
+		<div id="hdRt" class="hd-icon-wrp-rt animated fadeInRight">
+			<a class="hd-icon" href="guide.html" title="사용매뉴얼"><i class="xi-paper"></i><span class="sr-only">사용매뉴얼</span></a>
+			<a class="hd-icon" href="" title="로그인/회원가입" onClick="menuOpen('side-nav-right');return false;"><i class="xi-user"></i><span class="sr-only">로그인/회원가입</span></a>
+		</div>
+		<!-- gnb 
+			[D]  로그인 class=after_login 로 구분
+		-->
+		<nav id="gnb" class="gnb">
+			<ul>
+				<li><h2><a class="font-sp color_rocket" href="index.html"><i class="xi-rocket"></i><span>Rocket</span></a></h2></li>
+				<li class="active"><a href="rocket.html"><i class="xi-satellite"></i><span>로켓기지</span></a></li>
+				<li><a href="recommend.html"><i class="xi-present"></i><span>알림로켓<b class="animated rubberBand">12</b></span></a></li>
+				<li><a href="scrap.html"><i class="xi-tagged-book"></i><span>찜한로켓<b class="animated rubberBand">?</b></span></a></li>
+				<li><a href="mypage_member.html"><i class="xi-flag-triangle"></i><span>탑승로켓<b class="animated rubberBand">8</b></span></a></li>
+			</ul>
+		</nav>
+	</header>
+	<!--// header -->
+
+	<!-- container -->
+	<div id="container">
+
+<!-- content include -->
+<div id="ct">
+
+	내용
+
+</div>
+<!--// content include -->
+
+	</div>
+	<!--// container -->
+
+	<!-- footer -->
+	<footer id="ft">
+		<div class="container-fluid w1200">
+			<h2 class="font-sp color-red"><i class="xi-rocket"></i> <strong>ROCKET</strong></h2>
+			<div class="ft-sns">
+				<a href="" target="_blank" title="페이스북"><i class="xi-facebook"></i><span class="sr-only">페이스북</span></a>
+				<a href="" target="_blank" title="카카오스토리"><i class="xi-kakaostory"></i><span class="sr-only">카카오스토리</span></a>
+			</div>
+			<div class="ft-policy">
+				<ul class="ft-mn list-inline">
+					<li><a href="info_about.html">서비스 소개</a></li>
+					<li><a href="info_terms.html">이용약관</a></li>
+					<li><a href="info_privacy.html">개인정보처리방침</a></li>
+					<li><a href="info_faq.html">고객센터</a></li>
+					<li><a href="info_collaboration.html">제휴문의</a></li>
+				</ul>
+				<address>COPYRIGHT &copy; ROCKET. All RIGHTS RESERVED</address>
+			</div>
+		</div>
+		<a id="goTop" href="#wrap"><i class="xi2-caret-up-circle"></i><span class="sr-only">위로</span></a>
+	</footer>
+	<!--// footer -->
+
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<!-- lib -->
+<script src="assets/libs/Swiper/js/swiper.jquery.min.js"></script>
+<script src="assets/libs/moment.min.js"></script>
+<script src="assets/libs/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<!-- common -->
+<script src="assets/js/common.js"></script>
+</body>
+</html>
